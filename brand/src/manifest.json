@@ -1,0 +1,672 @@
+[
+ {
+  "path": "logo/symbol/tilo-symbol-color-light.svg",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), full colour, for light backgrounds",
+  "item": "symbol",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-color-dark.svg",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), full colour, for dark backgrounds",
+  "item": "symbol",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-mono-black.svg",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), one colour, black",
+  "item": "symbol",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-mono-white.svg",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), one colour, white",
+  "item": "symbol",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-brand.svg",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), one colour, Tilo teal",
+  "item": "symbol",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-color-light.svg",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), full colour, for light backgrounds",
+  "item": "wordmark",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-color-dark.svg",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), full colour, for dark backgrounds",
+  "item": "wordmark",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-mono-black.svg",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), one colour, black",
+  "item": "wordmark",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-mono-white.svg",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), one colour, white",
+  "item": "wordmark",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-brand.svg",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), one colour, Tilo teal",
+  "item": "wordmark",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-color-light.svg",
+  "kind": "logo",
+  "desc": "Horizontal lockup, full colour, for light backgrounds",
+  "item": "lockup-horizontal",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-color-dark.svg",
+  "kind": "logo",
+  "desc": "Horizontal lockup, full colour, for dark backgrounds",
+  "item": "lockup-horizontal",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-mono-black.svg",
+  "kind": "logo",
+  "desc": "Horizontal lockup, one colour, black",
+  "item": "lockup-horizontal",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-mono-white.svg",
+  "kind": "logo",
+  "desc": "Horizontal lockup, one colour, white",
+  "item": "lockup-horizontal",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-brand.svg",
+  "kind": "logo",
+  "desc": "Horizontal lockup, one colour, Tilo teal",
+  "item": "lockup-horizontal",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-color-light.svg",
+  "kind": "logo",
+  "desc": "Stacked lockup, full colour, for light backgrounds",
+  "item": "lockup-stacked",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-color-dark.svg",
+  "kind": "logo",
+  "desc": "Stacked lockup, full colour, for dark backgrounds",
+  "item": "lockup-stacked",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-mono-black.svg",
+  "kind": "logo",
+  "desc": "Stacked lockup, one colour, black",
+  "item": "lockup-stacked",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-mono-white.svg",
+  "kind": "logo",
+  "desc": "Stacked lockup, one colour, white",
+  "item": "lockup-stacked",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-brand.svg",
+  "kind": "logo",
+  "desc": "Stacked lockup, one colour, Tilo teal",
+  "item": "lockup-stacked",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/construction/tilo-construction.svg",
+  "kind": "guide",
+  "desc": "Construction grid: symbol and wordmark"
+ },
+ {
+  "path": "logo/construction/tilo-clear-space.svg",
+  "kind": "guide",
+  "desc": "Clear space: two dot diameters on every side"
+ },
+ {
+  "path": "logo/construction/tilo-minimum-size.svg",
+  "kind": "guide",
+  "desc": "Minimum sizes at actual pixel size"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-stretch.svg",
+  "kind": "misuse",
+  "desc": "Do not stretch or squash",
+  "key": "stretch"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-recolour.svg",
+  "kind": "misuse",
+  "desc": "Do not recolour with off-palette colours",
+  "key": "recolour"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-rotate.svg",
+  "kind": "misuse",
+  "desc": "Do not rotate or tilt",
+  "key": "rotate"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-effects.svg",
+  "kind": "misuse",
+  "desc": "Do not add shadows, glows or gradients",
+  "key": "effects"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-outline.svg",
+  "kind": "misuse",
+  "desc": "Do not outline the logo",
+  "key": "outline"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-rearrange.svg",
+  "kind": "misuse",
+  "desc": "Do not move the dot or rearrange parts",
+  "key": "rearrange"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-font.svg",
+  "kind": "misuse",
+  "desc": "Do not retype the wordmark in a font",
+  "key": "font"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-busy.svg",
+  "kind": "misuse",
+  "desc": "Do not place on busy or low-contrast backgrounds",
+  "key": "busy"
+ },
+ {
+  "path": "logo/misuse/tilo-dont-monogram-alone.svg",
+  "kind": "misuse",
+  "desc": "Do not use the 05 wave-i on its own: it reads as \u201cni\u201d",
+  "key": "monogram-alone"
+ },
+ {
+  "path": "logo/misuse/tilo-incorrect-use.svg",
+  "kind": "guide",
+  "desc": "Incorrect use sheet"
+ },
+ {
+  "path": "app/tilo-app-icon-ios-1024.svg",
+  "kind": "app",
+  "desc": "App icon iOS, 1024 full bleed (the system rounds it)"
+ },
+ {
+  "path": "app/tilo-app-icon-rounded-1024.svg",
+  "kind": "app",
+  "desc": "App icon with rounded corners, for mockups and stores that need it"
+ },
+ {
+  "path": "app/tilo-android-adaptive-background-432.svg",
+  "kind": "app",
+  "desc": "Android adaptive icon background layer, 432 px"
+ },
+ {
+  "path": "app/tilo-android-adaptive-foreground-432.svg",
+  "kind": "app",
+  "desc": "Android adaptive icon foreground layer, 432 px, mark inside the 264 px safe circle"
+ },
+ {
+  "path": "app/tilo-android-monochrome-432.svg",
+  "kind": "app",
+  "desc": "Android 13+ themed (monochrome) icon layer, 432 px"
+ },
+ {
+  "path": "app/tilo-pwa-maskable-512.svg",
+  "kind": "app",
+  "desc": "PWA maskable icon 512, mark inside the 80% safe circle"
+ },
+ {
+  "path": "favicon/favicon.svg",
+  "kind": "favicon",
+  "desc": "Favicon (SVG), rounded tile"
+ },
+ {
+  "path": "favicon/tilo-favicon-tile.svg",
+  "kind": "favicon",
+  "desc": "Favicon tile source for PNG sizes 16, 32, 48, 192, 512"
+ },
+ {
+  "path": "favicon/tilo-apple-touch-icon.svg",
+  "kind": "favicon",
+  "desc": "Apple touch icon source (180 px PNG), full bleed"
+ },
+ {
+  "path": "social/tilo-avatar-512.svg",
+  "kind": "social",
+  "desc": "Social avatar 512 (Telegram, GitHub), safe for a circle crop"
+ },
+ {
+  "path": "social/tilo-og-1200x630-uz.svg",
+  "kind": "social",
+  "desc": "Open Graph / link preview 1200x630 (uz)",
+  "lang": "uz"
+ },
+ {
+  "path": "social/tilo-og-1200x630-en.svg",
+  "kind": "social",
+  "desc": "Open Graph / link preview 1200x630 (en)",
+  "lang": "en"
+ },
+ {
+  "path": "social/tilo-og-1200x630-ru.svg",
+  "kind": "social",
+  "desc": "Open Graph / link preview 1200x630 (ru)",
+  "lang": "ru"
+ },
+ {
+  "path": "social/tilo-github-social-1280x640.svg",
+  "kind": "social",
+  "desc": "GitHub social preview 1280x640"
+ },
+ {
+  "path": "social/tilo-telegram-cover-1280x720.svg",
+  "kind": "social",
+  "desc": "Telegram channel cover / pinned post 1280x720"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-call.svg",
+  "kind": "icon",
+  "desc": "Video call",
+  "key": "call"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-captions.svg",
+  "kind": "icon",
+  "desc": "Live captions",
+  "key": "captions"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-card.svg",
+  "kind": "icon",
+  "desc": "Sign dictionary card",
+  "key": "card"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-sos.svg",
+  "kind": "icon",
+  "desc": "SOS / emergency",
+  "key": "sos"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-sign.svg",
+  "kind": "icon",
+  "desc": "Hand / sign language",
+  "key": "sign"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-dataset.svg",
+  "kind": "icon",
+  "desc": "Dataset",
+  "key": "dataset"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-interpreter.svg",
+  "kind": "icon",
+  "desc": "Interpreter (two people)",
+  "key": "interpreter"
+ },
+ {
+  "path": "iconography/icons/tilo-icon-wave.svg",
+  "kind": "icon",
+  "desc": "Tilo wave (brand glyph)",
+  "key": "wave"
+ },
+ {
+  "path": "iconography/tilo-icons-sheet.svg",
+  "kind": "icon",
+  "desc": "Icon sheet"
+ },
+ {
+  "path": "motion/reference/tilo-motion.css",
+  "kind": "motion",
+  "desc": "Motion CSS (all states, reduced-motion aware)"
+ },
+ {
+  "path": "motion/reference/tilo-motion.js",
+  "kind": "motion",
+  "desc": "Motion controller JS (no dependencies)"
+ },
+ {
+  "path": "motion/reference/index.html",
+  "kind": "motion",
+  "desc": "Live demo page for the reference implementation"
+ },
+ {
+  "path": "motion/svg/tilo-motion-intro.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Intro (assemble)",
+  "state": "intro"
+ },
+ {
+  "path": "motion/svg/tilo-motion-idle.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Idle",
+  "state": "idle"
+ },
+ {
+  "path": "motion/svg/tilo-motion-listening.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Listening",
+  "state": "listening"
+ },
+ {
+  "path": "motion/svg/tilo-motion-captioning.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Captioning",
+  "state": "captioning"
+ },
+ {
+  "path": "motion/svg/tilo-motion-connecting.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Connecting call",
+  "state": "connecting"
+ },
+ {
+  "path": "motion/svg/tilo-motion-loading.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Loading",
+  "state": "loading"
+ },
+ {
+  "path": "motion/svg/tilo-motion-transition.svg",
+  "kind": "motion",
+  "desc": "Animated SVG: Transition",
+  "state": "transition"
+ },
+ {
+  "path": "motion/svg/tilo-lockup-intro-color-light.svg",
+  "kind": "motion",
+  "desc": "Animated lockup intro (color-light)"
+ },
+ {
+  "path": "motion/svg/tilo-lockup-intro-color-dark.svg",
+  "kind": "motion",
+  "desc": "Animated lockup intro (color-dark)"
+ },
+ {
+  "path": "colors/tokens.json",
+  "kind": "tokens",
+  "desc": "Design tokens (JSON)"
+ },
+ {
+  "path": "colors/tokens.css",
+  "kind": "tokens",
+  "desc": "Design tokens (CSS variables, light + dark)"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-color-light.png",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), full colour, for light backgrounds (PNG)",
+  "item": "symbol",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-color-dark.png",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), full colour, for dark backgrounds (PNG)",
+  "item": "symbol",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-mono-black.png",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), one colour, black (PNG)",
+  "item": "symbol",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-mono-white.png",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), one colour, white (PNG)",
+  "item": "symbol",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/symbol/tilo-symbol-brand.png",
+  "kind": "logo",
+  "desc": "Symbol (01 Geometrik), one colour, Tilo teal (PNG)",
+  "item": "symbol",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-color-light.png",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), full colour, for light backgrounds (PNG)",
+  "item": "wordmark",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-color-dark.png",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), full colour, for dark backgrounds (PNG)",
+  "item": "wordmark",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-mono-black.png",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), one colour, black (PNG)",
+  "item": "wordmark",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-mono-white.png",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), one colour, white (PNG)",
+  "item": "wordmark",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/wordmark/tilo-wordmark-brand.png",
+  "kind": "logo",
+  "desc": "Wordmark (05 Monogram), one colour, Tilo teal (PNG)",
+  "item": "wordmark",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-color-light.png",
+  "kind": "logo",
+  "desc": "Horizontal lockup, full colour, for light backgrounds (PNG)",
+  "item": "lockup-horizontal",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-color-dark.png",
+  "kind": "logo",
+  "desc": "Horizontal lockup, full colour, for dark backgrounds (PNG)",
+  "item": "lockup-horizontal",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-mono-black.png",
+  "kind": "logo",
+  "desc": "Horizontal lockup, one colour, black (PNG)",
+  "item": "lockup-horizontal",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-mono-white.png",
+  "kind": "logo",
+  "desc": "Horizontal lockup, one colour, white (PNG)",
+  "item": "lockup-horizontal",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/lockup-horizontal/tilo-lockup-horizontal-brand.png",
+  "kind": "logo",
+  "desc": "Horizontal lockup, one colour, Tilo teal (PNG)",
+  "item": "lockup-horizontal",
+  "colourway": "brand"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-color-light.png",
+  "kind": "logo",
+  "desc": "Stacked lockup, full colour, for light backgrounds (PNG)",
+  "item": "lockup-stacked",
+  "colourway": "color-light"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-color-dark.png",
+  "kind": "logo",
+  "desc": "Stacked lockup, full colour, for dark backgrounds (PNG)",
+  "item": "lockup-stacked",
+  "colourway": "color-dark"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-mono-black.png",
+  "kind": "logo",
+  "desc": "Stacked lockup, one colour, black (PNG)",
+  "item": "lockup-stacked",
+  "colourway": "mono-black"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-mono-white.png",
+  "kind": "logo",
+  "desc": "Stacked lockup, one colour, white (PNG)",
+  "item": "lockup-stacked",
+  "colourway": "mono-white"
+ },
+ {
+  "path": "logo/lockup-stacked/tilo-lockup-stacked-brand.png",
+  "kind": "logo",
+  "desc": "Stacked lockup, one colour, Tilo teal (PNG)",
+  "item": "lockup-stacked",
+  "colourway": "brand"
+ },
+ {
+  "path": "app/tilo-app-icon-ios-1024.png",
+  "kind": "app",
+  "desc": "App icon iOS, 1024 full bleed (the system rounds it) (PNG)"
+ },
+ {
+  "path": "app/tilo-app-icon-rounded-1024.png",
+  "kind": "app",
+  "desc": "App icon with rounded corners, for mockups and stores that need it (PNG)"
+ },
+ {
+  "path": "app/tilo-android-adaptive-background-432.png",
+  "kind": "app",
+  "desc": "Android adaptive icon background layer, 432 px (PNG)"
+ },
+ {
+  "path": "app/tilo-android-adaptive-foreground-432.png",
+  "kind": "app",
+  "desc": "Android adaptive icon foreground layer, 432 px, mark inside the 264 px safe circle (PNG)"
+ },
+ {
+  "path": "app/tilo-android-monochrome-432.png",
+  "kind": "app",
+  "desc": "Android 13+ themed (monochrome) icon layer, 432 px (PNG)"
+ },
+ {
+  "path": "app/tilo-pwa-maskable-512.png",
+  "kind": "app",
+  "desc": "PWA maskable icon 512, mark inside the 80% safe circle (PNG)"
+ },
+ {
+  "path": "favicon/favicon-16.png",
+  "kind": "favicon",
+  "desc": "Favicon 16 px"
+ },
+ {
+  "path": "favicon/favicon-32.png",
+  "kind": "favicon",
+  "desc": "Favicon 32 px"
+ },
+ {
+  "path": "favicon/favicon-48.png",
+  "kind": "favicon",
+  "desc": "Favicon 48 px"
+ },
+ {
+  "path": "favicon/favicon-192.png",
+  "kind": "favicon",
+  "desc": "PWA icon 192 px"
+ },
+ {
+  "path": "favicon/favicon-512.png",
+  "kind": "favicon",
+  "desc": "PWA icon 512 px"
+ },
+ {
+  "path": "favicon/apple-touch-icon-180.png",
+  "kind": "favicon",
+  "desc": "Apple touch icon 180 px"
+ },
+ {
+  "path": "favicon/favicon.ico",
+  "kind": "favicon",
+  "desc": "favicon.ico (16, 32, 48)"
+ },
+ {
+  "path": "social/tilo-avatar-512.png",
+  "kind": "social",
+  "desc": "Social avatar 512 (Telegram, GitHub), safe for a circle crop (PNG)"
+ },
+ {
+  "path": "social/tilo-og-1200x630-uz.png",
+  "kind": "social",
+  "desc": "Open Graph / link preview 1200x630 (uz) (PNG)",
+  "lang": "uz"
+ },
+ {
+  "path": "social/tilo-og-1200x630-en.png",
+  "kind": "social",
+  "desc": "Open Graph / link preview 1200x630 (en) (PNG)",
+  "lang": "en"
+ },
+ {
+  "path": "social/tilo-og-1200x630-ru.png",
+  "kind": "social",
+  "desc": "Open Graph / link preview 1200x630 (ru) (PNG)",
+  "lang": "ru"
+ },
+ {
+  "path": "social/tilo-github-social-1280x640.png",
+  "kind": "social",
+  "desc": "GitHub social preview 1280x640 (PNG)"
+ },
+ {
+  "path": "social/tilo-telegram-cover-1280x720.png",
+  "kind": "social",
+  "desc": "Telegram channel cover / pinned post 1280x720 (PNG)"
+ },
+ {
+  "path": "logo/construction/tilo-construction.png",
+  "kind": "guide",
+  "desc": "Construction grid: symbol and wordmark (PNG)"
+ },
+ {
+  "path": "logo/misuse/tilo-incorrect-use.png",
+  "kind": "guide",
+  "desc": "Incorrect use sheet (PNG)"
+ }
+]

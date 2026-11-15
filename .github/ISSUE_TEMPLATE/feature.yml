@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2026 Wonmor and Tilo contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: Idea
+description: A new idea, or a change to the plan
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your proposal
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links that back the idea (standards, laws, prior art)

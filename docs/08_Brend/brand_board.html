@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brend Taxtasi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Sora:wght@400;600;700&family=Lexend:wght@400;600;700&family=Unbounded:wght@400;600;700&family=Manrope:wght@400;600;700&family=Syne:wght@400;600;700&family=Outfit:wght@400;600;700&family=Bricolage+Grotesque:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F5F1;--fg:#16161A;--mut:#6B6B76;--card:#FFFFFF;--line:#E4E2DC;--stage:#EFEDE7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D0D10;--fg:#F2F1EE;--mut:#9A9AA6;--card:#16161B;--line:#26262E;--stage:#1C1C22}}
+:root[data-theme="dark"]{--bg:#0D0D10;--fg:#F2F1EE;--mut:#9A9AA6;--card:#16161B;--line:#26262E;--stage:#1C1C22}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.5 "Plus Jakarta Sans",system-ui,sans-serif}
+header{max-width:1320px;margin:0 auto;padding:48px 24px 24px;display:flex;gap:24px;justify-content:space-between;align-items:end;flex-wrap:wrap}
+header h1{font:700 44px/1.05 "Unbounded",sans-serif;margin:0;letter-spacing:-.02em}
+header p{margin:8px 0 0;color:var(--mut);max-width:720px}
+button{font:600 14px "Plus Jakarta Sans";padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+main{max-width:1320px;margin:0 auto;padding:0 24px 64px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(600px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:230px 1fr}
+.stage{position:relative;background:radial-gradient(120% 90% at 30% 20%,color-mix(in srgb,var(--a) 16%,transparent),transparent 60%),var(--stage);display:grid;place-items:center;padding:20px}
+.num{position:absolute;top:14px;left:16px;font:600 12px "Space Grotesk";color:var(--mut)}
+.logo{width:180px;height:180px;overflow:visible}
+.mono{color:var(--fg)}
+.meta{padding:20px 22px}
+.meta h2{margin:0;font-size:46px;line-height:1;letter-spacing:-.03em}
+.pr{margin:6px 0 10px;color:var(--mut);font-size:13px}
+.lg{margin:0 0 12px;font-size:13px}
+.row{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.fav{display:flex;gap:8px;align-items:center}.fav small{color:var(--mut);font-size:11px}
+.pal{display:flex;gap:6px}.sw{width:58px;height:34px;border-radius:10px;display:flex;align-items:end;padding:3px 5px}
+.sw em{font:600 9px "Space Grotesk";font-style:normal;color:#000;background:rgba(255,255,255,.75);border-radius:4px;padding:0 3px}
+.font{font-size:12px;color:var(--mut);margin:10px 0}.font b{color:var(--fg);font-size:14px}
+.score{display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;font-size:11.5px}
+.sr{display:grid;grid-template-columns:118px 1fr 16px;align-items:center;gap:6px}.sr span{color:var(--mut)}
+.sr i{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--a) calc(var(--v)*10%),var(--line) 0)}
+.tot{grid-column:1/-1;text-align:right;font-size:13px;margin-top:4px}.tot b{font-size:18px}
+.avail{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 10px;margin-top:10px;font-size:11px}
+.av{display:flex;flex-direction:column}.av span:first-child{color:var(--mut)}
+.chip{font:600 11px "Space Grotesk";border-radius:6px;padding:1px 6px;width:max-content}
+.chip.free{background:#D8F5E6;color:#0B6B3A}.chip.mix{background:#FFF1CC;color:#7A5300}.chip.taken{background:#FBDADA;color:#8E1B1B}.chip.na{background:var(--line);color:var(--mut)}
+section.cmp{margin:40px 0 0;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;overflow-x:auto}
+section.cmp h3{margin:0 0 12px;font:700 22px "Unbounded"}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:center}th:first-child,td:first-child{text-align:left;font-size:17px}
+th{color:var(--mut);font-weight:600;font-size:11.5px}
+.note{color:var(--mut);font-size:12px;margin-top:12px}
+@keyframes pop{0%,100%{scale:1}50%{scale:1.25}}
+.k1 .p1{animation:kA 4s ease-in-out infinite}.k1 .p2{animation:kB 4s ease-in-out infinite}.k1 .p3{animation:pop 4s ease-in-out infinite}@keyframes kA{0%,100%{translate:0 0}50%{translate:-14px -10px}}@keyframes kB{0%,100%{translate:0 0}50%{translate:14px 10px}}.k2 .spin{transform-box:view-box;transform-origin:256px 256px;animation:spin4 5s cubic-bezier(.7,0,.2,1) infinite}@keyframes spin4{0%,30%{rotate:0deg}50%,80%{rotate:90deg}100%{rotate:90deg}}.k2 .p3{animation:pop 2.5s ease-in-out infinite}.k3 .b{transform-box:fill-box;transform-origin:left center;animation:typ 4.5s cubic-bezier(.6,0,.2,1) infinite}.k3 .b2{animation-delay:.15s}.k3 .b3{animation-delay:.3s}.k3 .b4{animation-delay:.45s}.k3 .p2{animation:blink 1s steps(2) infinite}@keyframes typ{0%{scale:0 1}25%,85%{scale:1 1}100%{scale:0 1}}@keyframes blink{50%{opacity:0}}.k4 .p2{animation:rise 4s ease-in-out infinite}.k4 .p3{transform-box:fill-box;transform-origin:center;animation:gnd 4s ease-in-out infinite}@keyframes rise{0%,100%{translate:0 36px;opacity:.2}45%,70%{translate:0 0;opacity:1}}@keyframes gnd{0%,100%{scale:.7 1}50%{scale:1 1}}.k5 .p1{animation:vA 4s ease-in-out infinite}.k5 .p2{animation:vB 4s ease-in-out infinite}.k5 .p3{transform-box:fill-box;transform-origin:center;animation:lens 4s ease-in-out infinite}@keyframes vA{0%,100%{translate:0 0}50%{translate:-18px 0}}@keyframes vB{0%,100%{translate:0 0}50%{translate:18px 0}}@keyframes lens{0%,100%{scale:1;opacity:1}50%{scale:.55 .8;opacity:.35}}.k6 .p1{animation:lid 3.6s cubic-bezier(.5,0,.2,1) infinite}@keyframes lid{0%,100%{translate:0 18px}40%,75%{translate:0 -10px}}.k6 .p2{animation:fl 3.6s ease-in-out infinite}.k6 .p3{animation:fr 3.6s ease-in-out infinite}@keyframes fl{50%{translate:-6px 0}}@keyframes fr{50%{translate:6px 0}}.k7 .p1,.k7 .p2{stroke-dasharray:240;animation:flow 3.2s ease-in-out infinite}.k7 .p2{animation-delay:.25s}.k7 .p3{animation:bob 3.2s ease-in-out infinite}@keyframes flow{0%{stroke-dashoffset:240}40%,80%{stroke-dashoffset:0}100%{stroke-dashoffset:-240}}@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -16px}}.k8 .orb{transform-box:view-box;transform-origin:256px 256px;animation:orbit 6s linear infinite}@keyframes orbit{to{rotate:360deg}}.k8 .p1{transform-box:fill-box;transform-origin:center;animation:pulse 3s ease-in-out infinite}@keyframes pulse{50%{scale:.88}}.k9 .spin{transform-box:view-box;transform-origin:256px 256px;animation:spin3 6s cubic-bezier(.6,0,.2,1) infinite}@keyframes spin3{0%,20%{rotate:0deg}33%,53%{rotate:120deg}66%,86%{rotate:240deg}100%{rotate:360deg}}.k10 .p2{transform-box:fill-box;transform-origin:center;animation:meet 3s ease-in-out infinite}@keyframes meet{0%,100%{scale:.4;opacity:.5}50%{scale:1.15;opacity:1}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+html.still *{animation:none!important}
+@media (max-width:680px){.grid{grid-template-columns:1fr}.card{grid-template-columns:1fr}header h1{font-size:32px}.score{grid-template-columns:1fr}main,header{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<header>
+  <div><h1>10 ta nom, 10 ta belgi</h1>
+  <p>Kar va eshitishda nuqsoni bor odamlar uchun ochiq muloqot platformasi: brend variantlari. Har bir belgi bir necha nomlangan geometrik qismdan qurilgan, shuning uchun uni 3D ga o'tkazish va animatsiya qilish oson. Mavjudlik 2026-11-15 da RDAP, cctld.uz whois, GitHub API va t.me orqali tekshirilgan; "bo'sh?" = taxminan bo'sh, kafolat emas.</p></div>
+  <button id="t" type="button">Yorug' / qorong'i</button>
+</header>
+<main>
+<div class="grid">
+<article class="card k1" style="--a:#FF5A36;--b:#2B3BFF">
+  <div class="stage"><span class="num">01</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Kivo logo"><g id="kivo-mark" transform="rotate(-24 256 256)">
+    <path id="half-a" class="p1" d="M246 96 A160 160 0 0 0 246 416 Z" transform="translate(-16 -12)" fill="#FF5A36"/>
+    <path id="half-b" class="p2" d="M266 96 A160 160 0 0 1 266 416 Z" transform="translate(16 12)" fill="#2B3BFF"/>
+  </g>
+  <circle id="spark" class="p3" cx="404" cy="108" r="26" fill="#FFC23C"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Space Grotesk';font-weight:700">kivo</h2>
+    <p class="pr">/ˈki.vo/ &middot; o'qilishi: <b>ki-vo</b></p>
+    <p class="lg"><b>Logo: Ikki yarim.</b> Bitta disk diagonal bo&#x27;ylab ikkiga bo&#x27;lingan va yarimlari bir-biriga qarab siljigan: ikki tomon uchrashadi, o&#x27;rtadagi tirqish esa &quot;bosh irg&#x27;ash&quot; chizig&#x27;i. Burchakdagi nuqta tushunish uchquni.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><g id="kivo-mark" transform="rotate(-24 256 256)">
+    <path id="half-a" class="p1" d="M246 96 A160 160 0 0 0 246 416 Z" transform="translate(-16 -12)" fill="#FF5A36"/>
+    <path id="half-b" class="p2" d="M266 96 A160 160 0 0 1 266 416 Z" transform="translate(16 12)" fill="#2B3BFF"/>
+  </g>
+  <circle id="spark" class="p3" cx="404" cy="108" r="26" fill="#FFC23C"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><g id="kivo-mark" transform="rotate(-24 256 256)">
+    <path id="half-a" class="p1" d="M246 96 A160 160 0 0 0 246 416 Z" transform="translate(-16 -12)" fill="#FF5A36"/>
+    <path id="half-b" class="p2" d="M266 96 A160 160 0 0 1 266 416 Z" transform="translate(16 12)" fill="#2B3BFF"/>
+  </g>
+  <circle id="spark" class="p3" cx="404" cy="108" r="26" fill="#FFC23C"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><g id="kivo-mark" transform="rotate(-24 256 256)">
+    <path id="half-a" class="p1" d="M246 96 A160 160 0 0 0 246 416 Z" transform="translate(-16 -12)" fill="currentColor"/>
+    <path id="half-b" class="p2" d="M266 96 A160 160 0 0 1 266 416 Z" transform="translate(16 12)" fill="currentColor"/>
+  </g>
+  <circle id="spark" class="p3" cx="404" cy="108" r="26" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><g id="kivo-mark" transform="rotate(-24 256 256)">
+    <path id="half-a" class="p1" d="M246 96 A160 160 0 0 0 246 416 Z" transform="translate(-16 -12)" fill="currentColor"/>
+    <path id="half-b" class="p2" d="M266 96 A160 160 0 0 1 266 416 Z" transform="translate(16 12)" fill="currentColor"/>
+  </g>
+  <circle id="spark" class="p3" cx="404" cy="108" r="26" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#FF5A36"><em>#FF5A36</em></span><span class="sw" style="background:#2B3BFF"><em>#2B3BFF</em></span><span class="sw" style="background:#FFC23C"><em>#FFC23C</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Space Grotesk'">Space Grotesk</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Esda qolish</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:3"></i><b>3</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:2"></i><b>2</b></div><div class="sr"><span>Hikoya</span><i style="--v:8"></i><b>8</b></div><div class="tot">Jami <b>57</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip taken">band</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip taken">band / band</span></div><div class="av"><span>Telegram nom/app</span><span class="chip taken">- / band</span></div></div>
+  </div>
+</article>
+<article class="card k2" style="--a:#7C5CFF;--b:#00C2A8">
+  <div class="stage"><span class="num">02</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Sezi logo"><g id="sezi-mark" class="spin">
+    <path id="petal-n" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" fill="#7C5CFF"/>
+    <path id="petal-e" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(90 256 256)" fill="#00C2A8"/>
+    <path id="petal-s" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(180 256 256)" fill="#7C5CFF"/>
+    <path id="petal-w" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(270 256 256)" fill="#00C2A8"/>
+  </g>
+  <circle id="core" class="p3" cx="256" cy="256" r="14" fill="#FFB547"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Sora';font-weight:600">sezi</h2>
+    <p class="pr">/se.ˈzi/ &middot; o'qilishi: <b>se-zi</b></p>
+    <p class="lg"><b>Logo: To&#x27;rt yaproq.</b> Markazdan chiqqan to&#x27;rtta asimmetrik yaproq parraksimon (vertushka) aylanma simmetriyada. Asimmetriya harakatni tinch holatda ham sezdiradi; markazdagi bo&#x27;shliq odamlar uchrashadigan joy.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><g id="sezi-mark" class="spin">
+    <path id="petal-n" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" fill="#7C5CFF"/>
+    <path id="petal-e" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(90 256 256)" fill="#00C2A8"/>
+    <path id="petal-s" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(180 256 256)" fill="#7C5CFF"/>
+    <path id="petal-w" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(270 256 256)" fill="#00C2A8"/>
+  </g>
+  <circle id="core" class="p3" cx="256" cy="256" r="14" fill="#FFB547"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><g id="sezi-mark" class="spin">
+    <path id="petal-n" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" fill="#7C5CFF"/>
+    <path id="petal-e" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(90 256 256)" fill="#00C2A8"/>
+    <path id="petal-s" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(180 256 256)" fill="#7C5CFF"/>
+    <path id="petal-w" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(270 256 256)" fill="#00C2A8"/>
+  </g>
+  <circle id="core" class="p3" cx="256" cy="256" r="14" fill="#FFB547"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><g id="sezi-mark" class="spin">
+    <path id="petal-n" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" fill="currentColor"/>
+    <path id="petal-e" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(90 256 256)" fill="currentColor"/>
+    <path id="petal-s" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(180 256 256)" fill="currentColor"/>
+    <path id="petal-w" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(270 256 256)" fill="currentColor"/>
+  </g>
+  <circle id="core" class="p3" cx="256" cy="256" r="14" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><g id="sezi-mark" class="spin">
+    <path id="petal-n" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" fill="currentColor"/>
+    <path id="petal-e" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(90 256 256)" fill="currentColor"/>
+    <path id="petal-s" class="p1" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(180 256 256)" fill="currentColor"/>
+    <path id="petal-w" class="p2" d="M256 236 C176 204 196 100 256 60 C292 118 302 196 256 236 Z" transform="rotate(270 256 256)" fill="currentColor"/>
+  </g>
+  <circle id="core" class="p3" cx="256" cy="256" r="14" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#7C5CFF"><em>#7C5CFF</em></span><span class="sw" style="background:#00C2A8"><em>#00C2A8</em></span><span class="sw" style="background:#FFB547"><em>#FFB547</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Sora'">Sora</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Esda qolish</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Hikoya</span><i style="--v:9"></i><b>9</b></div><div class="tot">Jami <b>63</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip taken">band / band</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">- / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k3" style="--a:#F5A524;--b:#00A6FB">
+  <div class="stage"><span class="num">03</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Tilo logo"><g id="tilo-mark">
+    <rect id="line-1" class="b b1" x="125" y="120" width="262" height="56" rx="28" fill="#F5A524"/>
+    <rect id="line-2" class="b b2" x="90" y="192" width="332" height="56" rx="28" fill="#F5A524"/>
+    <rect id="line-3" class="b b3" x="90" y="264" width="214" height="56" rx="28" fill="#F5A524"/>
+    <circle id="cursor" class="p2" cx="358" cy="292" r="28" fill="#00A6FB"/>
+    <rect id="line-4" class="b b4" x="125" y="336" width="262" height="56" rx="28" fill="#F5A524"/>
+  </g></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Lexend';font-weight:600">tilo</h2>
+    <p class="pr">/ti.ˈlo/ &middot; o'qilishi: <b>ti-lo</b></p>
+    <p class="lg"><b>Logo: Subtitr shar.</b> To&#x27;rtta yumaloq chiziqdan tuzilgan shar: bu jonli subtitr qatorlari. Uchinchi qator chala va oxirida kursor nuqtasi bor: matn hozir yozilyapti. Shar quyosh va oltin (tillo) bilan ham bog&#x27;lanadi.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><g id="tilo-mark">
+    <rect id="line-1" class="b b1" x="125" y="120" width="262" height="56" rx="28" fill="#F5A524"/>
+    <rect id="line-2" class="b b2" x="90" y="192" width="332" height="56" rx="28" fill="#F5A524"/>
+    <rect id="line-3" class="b b3" x="90" y="264" width="214" height="56" rx="28" fill="#F5A524"/>
+    <circle id="cursor" class="p2" cx="358" cy="292" r="28" fill="#00A6FB"/>
+    <rect id="line-4" class="b b4" x="125" y="336" width="262" height="56" rx="28" fill="#F5A524"/>
+  </g></svg><svg viewBox="0 0 512 512" width="32" height="32"><g id="tilo-mark">
+    <rect id="line-1" class="b b1" x="125" y="120" width="262" height="56" rx="28" fill="#F5A524"/>
+    <rect id="line-2" class="b b2" x="90" y="192" width="332" height="56" rx="28" fill="#F5A524"/>
+    <rect id="line-3" class="b b3" x="90" y="264" width="214" height="56" rx="28" fill="#F5A524"/>
+    <circle id="cursor" class="p2" cx="358" cy="292" r="28" fill="#00A6FB"/>
+    <rect id="line-4" class="b b4" x="125" y="336" width="262" height="56" rx="28" fill="#F5A524"/>
+  </g></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><g id="tilo-mark">
+    <rect id="line-1" class="b b1" x="125" y="120" width="262" height="56" rx="28" fill="currentColor"/>
+    <rect id="line-2" class="b b2" x="90" y="192" width="332" height="56" rx="28" fill="currentColor"/>
+    <rect id="line-3" class="b b3" x="90" y="264" width="214" height="56" rx="28" fill="currentColor"/>
+    <circle id="cursor" class="p2" cx="358" cy="292" r="28" fill="currentColor"/>
+    <rect id="line-4" class="b b4" x="125" y="336" width="262" height="56" rx="28" fill="currentColor"/>
+  </g></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><g id="tilo-mark">
+    <rect id="line-1" class="b b1" x="125" y="120" width="262" height="56" rx="28" fill="currentColor"/>
+    <rect id="line-2" class="b b2" x="90" y="192" width="332" height="56" rx="28" fill="currentColor"/>
+    <rect id="line-3" class="b b3" x="90" y="264" width="214" height="56" rx="28" fill="currentColor"/>
+    <circle id="cursor" class="p2" cx="358" cy="292" r="28" fill="currentColor"/>
+    <rect id="line-4" class="b b4" x="125" y="336" width="262" height="56" rx="28" fill="currentColor"/>
+  </g></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#F5A524"><em>#F5A524</em></span><span class="sw" style="background:#00A6FB"><em>#00A6FB</em></span><span class="sw" style="background:#FF5D73"><em>#FF5D73</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Lexend'">Lexend</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Esda qolish</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:6"></i><b>6</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Hikoya</span><i style="--v:9"></i><b>9</b></div><div class="tot">Jami <b>62</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip taken">band / band</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">- / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k4" style="--a:#1E6FFF;--b:#F2B33D">
+  <div class="stage"><span class="num">04</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Oyna logo"><path id="portal" class="p1" fill-rule="evenodd" d="M128 420 V248 A128 128 0 0 1 384 248 V420 Z M184 420 V252 A72 72 0 0 1 328 252 V420 Z" fill="#1E6FFF"/>
+  <circle id="sun" class="p2" cx="256" cy="318" r="42" fill="#F2B33D"/>
+  <rect id="ground" class="p3" x="88" y="436" width="336" height="22" rx="11" fill="#12B5A5"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Unbounded';font-weight:600">oyna</h2>
+    <p class="pr">/oj.ˈna/ &middot; o'qilishi: <b>oy-na</b></p>
+    <p class="lg"><b>Logo: Peshtoq.</b> Samarqand peshtoqi siluetidagi qalin ark-ramka, ichida ko&#x27;tarilayotgan quyosh-disk va pastda zamin chizig&#x27;i. Ark = darvoza: ikki dunyo orasidagi ochiq eshik. Bir vaqtning o&#x27;zida oyna (deraza) va ko&#x27;zgu.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><path id="portal" class="p1" fill-rule="evenodd" d="M128 420 V248 A128 128 0 0 1 384 248 V420 Z M184 420 V252 A72 72 0 0 1 328 252 V420 Z" fill="#1E6FFF"/>
+  <circle id="sun" class="p2" cx="256" cy="318" r="42" fill="#F2B33D"/>
+  <rect id="ground" class="p3" x="88" y="436" width="336" height="22" rx="11" fill="#12B5A5"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><path id="portal" class="p1" fill-rule="evenodd" d="M128 420 V248 A128 128 0 0 1 384 248 V420 Z M184 420 V252 A72 72 0 0 1 328 252 V420 Z" fill="#1E6FFF"/>
+  <circle id="sun" class="p2" cx="256" cy="318" r="42" fill="#F2B33D"/>
+  <rect id="ground" class="p3" x="88" y="436" width="336" height="22" rx="11" fill="#12B5A5"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><path id="portal" class="p1" fill-rule="evenodd" d="M128 420 V248 A128 128 0 0 1 384 248 V420 Z M184 420 V252 A72 72 0 0 1 328 252 V420 Z" fill="currentColor"/>
+  <circle id="sun" class="p2" cx="256" cy="318" r="42" fill="currentColor"/>
+  <rect id="ground" class="p3" x="88" y="436" width="336" height="22" rx="11" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><path id="portal" class="p1" fill-rule="evenodd" d="M128 420 V248 A128 128 0 0 1 384 248 V420 Z M184 420 V252 A72 72 0 0 1 328 252 V420 Z" fill="currentColor"/>
+  <circle id="sun" class="p2" cx="256" cy="318" r="42" fill="currentColor"/>
+  <rect id="ground" class="p3" x="88" y="436" width="336" height="22" rx="11" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#1E6FFF"><em>#1E6FFF</em></span><span class="sw" style="background:#F2B33D"><em>#F2B33D</em></span><span class="sw" style="background:#12B5A5"><em>#12B5A5</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Unbounded'">Unbounded</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Esda qolish</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:3"></i><b>3</b></div><div class="sr"><span>Hikoya</span><i style="--v:9"></i><b>9</b></div><div class="tot">Jami <b>58</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip taken">band</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip mix">band / bo&#x27;sh?</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">- / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k5" style="--a:#E8466B;--b:#5B5BF7">
+  <div class="stage"><span class="num">05</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Velu logo"><circle id="ring-a" class="p1" cx="200" cy="256" r="128" fill="none" stroke="#E8466B" stroke-width="36"/>
+  <circle id="ring-b" class="p2" cx="312" cy="256" r="128" fill="none" stroke="#5B5BF7" stroke-width="36"/>
+  <path id="lens" class="p3" d="M256 140.8 A128 128 0 0 1 256 371.2 A128 128 0 0 1 256 140.8 Z" fill="#FFD166"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Manrope';font-weight:700">velu</h2>
+    <p class="pr">/ˈve.lu/ &middot; o'qilishi: <b>ve-lu</b></p>
+    <p class="lg"><b>Logo: Umumiy linza.</b> Ikki qalin halqa bir-biriga kirib turadi, kesishgan linza esa to&#x27;la rangda: ikki odamning umumiy tili. Halqalar uzoqlashsa linza so&#x27;nadi, yaqinlashsa yonadi.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><circle id="ring-a" class="p1" cx="200" cy="256" r="128" fill="none" stroke="#E8466B" stroke-width="36"/>
+  <circle id="ring-b" class="p2" cx="312" cy="256" r="128" fill="none" stroke="#5B5BF7" stroke-width="36"/>
+  <path id="lens" class="p3" d="M256 140.8 A128 128 0 0 1 256 371.2 A128 128 0 0 1 256 140.8 Z" fill="#FFD166"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><circle id="ring-a" class="p1" cx="200" cy="256" r="128" fill="none" stroke="#E8466B" stroke-width="36"/>
+  <circle id="ring-b" class="p2" cx="312" cy="256" r="128" fill="none" stroke="#5B5BF7" stroke-width="36"/>
+  <path id="lens" class="p3" d="M256 140.8 A128 128 0 0 1 256 371.2 A128 128 0 0 1 256 140.8 Z" fill="#FFD166"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><circle id="ring-a" class="p1" cx="200" cy="256" r="128" fill="none" stroke="currentColor" stroke-width="36"/>
+  <circle id="ring-b" class="p2" cx="312" cy="256" r="128" fill="none" stroke="currentColor" stroke-width="36"/>
+  <path id="lens" class="p3" d="M256 140.8 A128 128 0 0 1 256 371.2 A128 128 0 0 1 256 140.8 Z" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><circle id="ring-a" class="p1" cx="200" cy="256" r="128" fill="none" stroke="currentColor" stroke-width="36"/>
+  <circle id="ring-b" class="p2" cx="312" cy="256" r="128" fill="none" stroke="currentColor" stroke-width="36"/>
+  <path id="lens" class="p3" d="M256 140.8 A128 128 0 0 1 256 371.2 A128 128 0 0 1 256 140.8 Z" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#E8466B"><em>#E8466B</em></span><span class="sw" style="background:#5B5BF7"><em>#5B5BF7</em></span><span class="sw" style="background:#FFD166"><em>#FFD166</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Manrope'">Manrope</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Esda qolish</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Hikoya</span><i style="--v:5"></i><b>5</b></div><div class="tot">Jami <b>59</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip mix">band / bo&#x27;sh?</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">- / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k6" style="--a:#6EE7F9;--b:#3B82F6">
+  <div class="stage"><span class="num">06</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Yuvel logo"><polygon id="facet-top" class="p1" points="256,96 391,174 256,252 121,174" transform="translate(0 -22)" fill="#6EE7F9"/>
+  <polygon id="facet-left" class="p2" points="112,190 248,268 248,424 112,346" fill="#3B82F6"/>
+  <polygon id="facet-right" class="p3" points="400,190 400,346 264,424 264,268" fill="#1D4ED8"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Syne';font-weight:700">yuvel</h2>
+    <p class="pr">/ju.ˈvel/ &middot; o'qilishi: <b>yu-vel</b></p>
+    <p class="lg"><b>Logo: Ochiq kristall.</b> Uchta rombdan tuzilgan izometrik kristall; yuqori qirra qopqoqdek ko&#x27;tarilib turadi: quti ochilyapti, ichidan yorug&#x27;lik chiqadi. Yuvelir (zargar) aniqligi va qimmatbaho narsa g&#x27;oyasi.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><polygon id="facet-top" class="p1" points="256,96 391,174 256,252 121,174" transform="translate(0 -22)" fill="#6EE7F9"/>
+  <polygon id="facet-left" class="p2" points="112,190 248,268 248,424 112,346" fill="#3B82F6"/>
+  <polygon id="facet-right" class="p3" points="400,190 400,346 264,424 264,268" fill="#1D4ED8"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><polygon id="facet-top" class="p1" points="256,96 391,174 256,252 121,174" transform="translate(0 -22)" fill="#6EE7F9"/>
+  <polygon id="facet-left" class="p2" points="112,190 248,268 248,424 112,346" fill="#3B82F6"/>
+  <polygon id="facet-right" class="p3" points="400,190 400,346 264,424 264,268" fill="#1D4ED8"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><polygon id="facet-top" class="p1" points="256,96 391,174 256,252 121,174" transform="translate(0 -22)" fill="currentColor"/>
+  <polygon id="facet-left" class="p2" points="112,190 248,268 248,424 112,346" fill="currentColor"/>
+  <polygon id="facet-right" class="p3" points="400,190 400,346 264,424 264,268" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><polygon id="facet-top" class="p1" points="256,96 391,174 256,252 121,174" transform="translate(0 -22)" fill="currentColor"/>
+  <polygon id="facet-left" class="p2" points="112,190 248,268 248,424 112,346" fill="currentColor"/>
+  <polygon id="facet-right" class="p3" points="400,190 400,346 264,424 264,268" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#6EE7F9"><em>#6EE7F9</em></span><span class="sw" style="background:#3B82F6"><em>#3B82F6</em></span><span class="sw" style="background:#1D4ED8"><em>#1D4ED8</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Syne'">Syne</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Esda qolish</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Hikoya</span><i style="--v:7"></i><b>7</b></div><div class="tot">Jami <b>63</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>.app</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip mix">band / bo&#x27;sh?</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">bo&#x27;sh? / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k7" style="--a:#00B37E;--b:#00C8F0">
+  <div class="stage"><span class="num">07</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Ondu logo"><path id="wave-a" class="p1" d="M112 268 A72 72 0 0 1 256 268" fill="none" stroke="#00B37E" stroke-width="56" stroke-linecap="round"/>
+  <path id="wave-b" class="p2" d="M256 268 A72 72 0 0 0 400 268" fill="none" stroke="#00C8F0" stroke-width="56" stroke-linecap="round"/>
+  <circle id="drop" class="p3" cx="400" cy="140" r="30" fill="#FF4D8D"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Outfit';font-weight:600">ondu</h2>
+    <p class="pr">/ˈon.du/ &middot; o'qilishi: <b>on-du</b></p>
+    <p class="lg"><b>Logo: To&#x27;lqin.</b> Ikki yarim halqadan tuzilgan S-to&#x27;lqin va uning ustidagi tomchi-nuqta. To&#x27;lqin = tovush, harakat va ishora ritmi; ikki yarim alohida qism, motion&#x27;da ajralib, qayta qo&#x27;shiladi.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><path id="wave-a" class="p1" d="M112 268 A72 72 0 0 1 256 268" fill="none" stroke="#00B37E" stroke-width="56" stroke-linecap="round"/>
+  <path id="wave-b" class="p2" d="M256 268 A72 72 0 0 0 400 268" fill="none" stroke="#00C8F0" stroke-width="56" stroke-linecap="round"/>
+  <circle id="drop" class="p3" cx="400" cy="140" r="30" fill="#FF4D8D"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><path id="wave-a" class="p1" d="M112 268 A72 72 0 0 1 256 268" fill="none" stroke="#00B37E" stroke-width="56" stroke-linecap="round"/>
+  <path id="wave-b" class="p2" d="M256 268 A72 72 0 0 0 400 268" fill="none" stroke="#00C8F0" stroke-width="56" stroke-linecap="round"/>
+  <circle id="drop" class="p3" cx="400" cy="140" r="30" fill="#FF4D8D"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><path id="wave-a" class="p1" d="M112 268 A72 72 0 0 1 256 268" fill="none" stroke="currentColor" stroke-width="56" stroke-linecap="round"/>
+  <path id="wave-b" class="p2" d="M256 268 A72 72 0 0 0 400 268" fill="none" stroke="currentColor" stroke-width="56" stroke-linecap="round"/>
+  <circle id="drop" class="p3" cx="400" cy="140" r="30" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><path id="wave-a" class="p1" d="M112 268 A72 72 0 0 1 256 268" fill="none" stroke="currentColor" stroke-width="56" stroke-linecap="round"/>
+  <path id="wave-b" class="p2" d="M256 268 A72 72 0 0 0 400 268" fill="none" stroke="currentColor" stroke-width="56" stroke-linecap="round"/>
+  <circle id="drop" class="p3" cx="400" cy="140" r="30" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#00B37E"><em>#00B37E</em></span><span class="sw" style="background:#00C8F0"><em>#00C8F0</em></span><span class="sw" style="background:#FF4D8D"><em>#FF4D8D</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Outfit'">Outfit</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Esda qolish</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Hikoya</span><i style="--v:6"></i><b>6</b></div><div class="tot">Jami <b>60</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip mix">band / bo&#x27;sh?</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">- / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k8" style="--a:#FF7A00;--b:#7B61FF">
+  <div class="stage"><span class="num">08</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Navo logo"><circle id="planet" class="p1" cx="256" cy="256" r="64" fill="#FF7A00"/>
+  <g id="orbit" class="orb">
+    <path id="ring" class="p2" d="M391.9 192.6 A150 150 0 1 1 319.4 120.1" fill="none" stroke="#7B61FF" stroke-width="40" stroke-linecap="round"/>
+    <circle id="moon" class="p3" cx="362" cy="150" r="30" fill="#FFD60A"/>
+  </g></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Bricolage Grotesque';font-weight:700">navo</h2>
+    <p class="pr">/na.ˈvo/ &middot; o'qilishi: <b>na-vo</b></p>
+    <p class="lg"><b>Logo: Orbita.</b> Markaziy disk, uni o&#x27;rab turgan uzilgan halqa va uzilish joyida turgan kichik yo&#x27;ldosh. Yo&#x27;ldosh halqa bo&#x27;ylab aylanib, bo&#x27;shliqni o&#x27;zi bilan olib yuradi: aloqa hech qachon to&#x27;xtamaydi.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><circle id="planet" class="p1" cx="256" cy="256" r="64" fill="#FF7A00"/>
+  <g id="orbit" class="orb">
+    <path id="ring" class="p2" d="M391.9 192.6 A150 150 0 1 1 319.4 120.1" fill="none" stroke="#7B61FF" stroke-width="40" stroke-linecap="round"/>
+    <circle id="moon" class="p3" cx="362" cy="150" r="30" fill="#FFD60A"/>
+  </g></svg><svg viewBox="0 0 512 512" width="32" height="32"><circle id="planet" class="p1" cx="256" cy="256" r="64" fill="#FF7A00"/>
+  <g id="orbit" class="orb">
+    <path id="ring" class="p2" d="M391.9 192.6 A150 150 0 1 1 319.4 120.1" fill="none" stroke="#7B61FF" stroke-width="40" stroke-linecap="round"/>
+    <circle id="moon" class="p3" cx="362" cy="150" r="30" fill="#FFD60A"/>
+  </g></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><circle id="planet" class="p1" cx="256" cy="256" r="64" fill="currentColor"/>
+  <g id="orbit" class="orb">
+    <path id="ring" class="p2" d="M391.9 192.6 A150 150 0 1 1 319.4 120.1" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round"/>
+    <circle id="moon" class="p3" cx="362" cy="150" r="30" fill="currentColor"/>
+  </g></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><circle id="planet" class="p1" cx="256" cy="256" r="64" fill="currentColor"/>
+  <g id="orbit" class="orb">
+    <path id="ring" class="p2" d="M391.9 192.6 A150 150 0 1 1 319.4 120.1" fill="none" stroke="currentColor" stroke-width="40" stroke-linecap="round"/>
+    <circle id="moon" class="p3" cx="362" cy="150" r="30" fill="currentColor"/>
+  </g></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#FF7A00"><em>#FF7A00</em></span><span class="sw" style="background:#7B61FF"><em>#7B61FF</em></span><span class="sw" style="background:#FFD60A"><em>#FFD60A</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Bricolage Grotesque'">Bricolage Grotesque</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Esda qolish</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:1"></i><b>1</b></div><div class="sr"><span>Hikoya</span><i style="--v:9"></i><b>9</b></div><div class="tot">Jami <b>58</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip taken">band</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip taken">band / band</span></div><div class="av"><span>Telegram nom/app</span><span class="chip taken">band / band</span></div></div>
+  </div>
+</article>
+<article class="card k9" style="--a:#EF476F;--b:#FFD166">
+  <div class="stage"><span class="num">09</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Ulvi logo"><g id="ulvi-mark" class="spin">
+    <rect id="blade-1" class="p1" x="228" y="66" width="72" height="156" rx="36" fill="#EF476F"/>
+    <rect id="blade-2" class="p2" x="228" y="66" width="72" height="156" rx="36" transform="rotate(120 256 256)" fill="#FFD166"/>
+    <rect id="blade-3" class="p3" x="228" y="66" width="72" height="156" rx="36" transform="rotate(240 256 256)" fill="#06D6A0"/>
+  </g></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Plus Jakarta Sans';font-weight:700">ulvi</h2>
+    <p class="pr">/ulˈvi/ &middot; o'qilishi: <b>ul-vi</b></p>
+    <p class="lg"><b>Logo: Uch ovoz.</b> Bitta markaz atrofida 120 gradusdan joylashgan uchta kapsula parrak: kar odam, eshituvchi odam va tarjimon. Har biri o&#x27;z rangida, lekin birgalikda bitta aylanma shakl hosil qiladi.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><g id="ulvi-mark" class="spin">
+    <rect id="blade-1" class="p1" x="228" y="66" width="72" height="156" rx="36" fill="#EF476F"/>
+    <rect id="blade-2" class="p2" x="228" y="66" width="72" height="156" rx="36" transform="rotate(120 256 256)" fill="#FFD166"/>
+    <rect id="blade-3" class="p3" x="228" y="66" width="72" height="156" rx="36" transform="rotate(240 256 256)" fill="#06D6A0"/>
+  </g></svg><svg viewBox="0 0 512 512" width="32" height="32"><g id="ulvi-mark" class="spin">
+    <rect id="blade-1" class="p1" x="228" y="66" width="72" height="156" rx="36" fill="#EF476F"/>
+    <rect id="blade-2" class="p2" x="228" y="66" width="72" height="156" rx="36" transform="rotate(120 256 256)" fill="#FFD166"/>
+    <rect id="blade-3" class="p3" x="228" y="66" width="72" height="156" rx="36" transform="rotate(240 256 256)" fill="#06D6A0"/>
+  </g></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><g id="ulvi-mark" class="spin">
+    <rect id="blade-1" class="p1" x="228" y="66" width="72" height="156" rx="36" fill="currentColor"/>
+    <rect id="blade-2" class="p2" x="228" y="66" width="72" height="156" rx="36" transform="rotate(120 256 256)" fill="currentColor"/>
+    <rect id="blade-3" class="p3" x="228" y="66" width="72" height="156" rx="36" transform="rotate(240 256 256)" fill="currentColor"/>
+  </g></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><g id="ulvi-mark" class="spin">
+    <rect id="blade-1" class="p1" x="228" y="66" width="72" height="156" rx="36" fill="currentColor"/>
+    <rect id="blade-2" class="p2" x="228" y="66" width="72" height="156" rx="36" transform="rotate(120 256 256)" fill="currentColor"/>
+    <rect id="blade-3" class="p3" x="228" y="66" width="72" height="156" rx="36" transform="rotate(240 256 256)" fill="currentColor"/>
+  </g></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#EF476F"><em>#EF476F</em></span><span class="sw" style="background:#FFD166"><em>#FFD166</em></span><span class="sw" style="background:#06D6A0"><em>#06D6A0</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Plus Jakarta Sans'">Plus Jakarta Sans</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:9"></i><b>9</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Esda qolish</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Hikoya</span><i style="--v:6"></i><b>6</b></div><div class="tot">Jami <b>57</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip taken">band</span></div><div class="av"><span>.app</span><span class="chip taken">band</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip mix">band / bo&#x27;sh?</span></div><div class="av"><span>Telegram nom/app</span><span class="chip free">- / bo&#x27;sh?</span></div></div>
+  </div>
+</article>
+<article class="card k10" style="--a:#14B8A6;--b:#F43F5E">
+  <div class="stage"><span class="num">10</span>
+    <svg viewBox="0 0 512 512" class="logo" aria-label="Teyva logo"><path id="diamonds" class="p1" fill-rule="evenodd" stroke="#14B8A6" stroke-width="26" stroke-linejoin="round" d="M206 112 L350 256 L206 400 L62 256 Z M306 112 L450 256 L306 400 L162 256 Z" fill="#14B8A6"/>
+  <circle id="meet" class="p2" cx="256" cy="256" r="20" fill="#F43F5E"/></svg>
+  </div>
+  <div class="meta">
+    <h2 style="font-family:'Instrument Sans';font-weight:700">teyva</h2>
+    <p class="pr">/ˈtej.va/ &middot; o'qilishi: <b>tey-va</b></p>
+    <p class="lg"><b>Logo: Yarim yo&#x27;lda.</b> Ikki romb yarim yo&#x27;lda uchrashadi; kesishgan joy bo&#x27;sh qoladi va unda kichik nuqta yonadi: uchrashuv nuqtasi. Bo&#x27;shliq (negative space) belgining asosiy qahramoni.</p>
+    <div class="row">
+      <div class="fav"><svg viewBox="0 0 512 512" width="16" height="16"><path id="diamonds" class="p1" fill-rule="evenodd" stroke="#14B8A6" stroke-width="26" stroke-linejoin="round" d="M206 112 L350 256 L206 400 L62 256 Z M306 112 L450 256 L306 400 L162 256 Z" fill="#14B8A6"/>
+  <circle id="meet" class="p2" cx="256" cy="256" r="20" fill="#F43F5E"/></svg><svg viewBox="0 0 512 512" width="32" height="32"><path id="diamonds" class="p1" fill-rule="evenodd" stroke="#14B8A6" stroke-width="26" stroke-linejoin="round" d="M206 112 L350 256 L206 400 L62 256 Z M306 112 L450 256 L306 400 L162 256 Z" fill="#14B8A6"/>
+  <circle id="meet" class="p2" cx="256" cy="256" r="20" fill="#F43F5E"/></svg><svg viewBox="0 0 512 512" width="16" height="16" class="mono"><path id="diamonds" class="p1" fill-rule="evenodd" stroke="currentColor" stroke-width="26" stroke-linejoin="round" d="M206 112 L350 256 L206 400 L62 256 Z M306 112 L450 256 L306 400 L162 256 Z" fill="currentColor"/>
+  <circle id="meet" class="p2" cx="256" cy="256" r="20" fill="currentColor"/></svg><svg viewBox="0 0 512 512" width="32" height="32" class="mono"><path id="diamonds" class="p1" fill-rule="evenodd" stroke="currentColor" stroke-width="26" stroke-linejoin="round" d="M206 112 L350 256 L206 400 L62 256 Z M306 112 L450 256 L306 400 L162 256 Z" fill="currentColor"/>
+  <circle id="meet" class="p2" cx="256" cy="256" r="20" fill="currentColor"/></svg><small>16 / 32 px</small></div>
+      <div class="pal"><span class="sw" style="background:#14B8A6"><em>#14B8A6</em></span><span class="sw" style="background:#F43F5E"><em>#F43F5E</em></span><span class="sw" style="background:#0EA5E9"><em>#0EA5E9</em></span></div>
+    </div>
+    <p class="font">Shrift: <b style="font-family:'Instrument Sans'">Instrument Sans</b> (Google Fonts)</p>
+    <div class="score"><div class="sr"><span>Qisqalik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Jarangdorlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Esda qolish</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Ko&#x27;p tilli talaffuz</span><i style="--v:7"></i><b>7</b></div><div class="sr"><span>Salbiy ma&#x27;no yo&#x27;q</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Konflikt yo&#x27;q</span><i style="--v:5"></i><b>5</b></div><div class="sr"><span>Mavjudlik</span><i style="--v:8"></i><b>8</b></div><div class="sr"><span>Hikoya</span><i style="--v:5"></i><b>5</b></div><div class="tot">Jami <b>56</b>/80</div></div>
+    <div class="avail"><div class="av"><span>.com</span><span class="chip taken">band</span></div><div class="av"><span>.org</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>.app</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>.uz</span><span class="chip free">bo&#x27;sh?</span></div><div class="av"><span>GitHub nom/-app</span><span class="chip mix">band / bo&#x27;sh?</span></div><div class="av"><span>Telegram nom/app</span><span class="chip mix">band / bo&#x27;sh?</span></div></div>
+  </div>
+</article></div>
+<section class="cmp"><h3>Taqqoslash jadvali (ball bo'yicha)</h3>
+<table><thead><tr><th>Nom</th><th>Qisqalik</th><th>Jarangdorlik</th><th>Esda qolish</th><th>Ko&#x27;p tilli talaffuz</th><th>Salbiy ma&#x27;no yo&#x27;q</th><th>Konflikt yo&#x27;q</th><th>Mavjudlik</th><th>Hikoya</th><th>Jami /80</th></tr></thead><tbody><tr><td style="font-family:'Sora';font-weight:600">Sezi</td><td>9</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>5</td><td>9</td><td><b>63</b></td></tr><tr><td style="font-family:'Syne';font-weight:700">Yuvel</td><td>8</td><td>8</td><td>8</td><td>8</td><td>8</td><td>7</td><td>9</td><td>7</td><td><b>63</b></td></tr><tr><td style="font-family:'Lexend';font-weight:600">Tilo</td><td>9</td><td>8</td><td>8</td><td>9</td><td>8</td><td>6</td><td>5</td><td>9</td><td><b>62</b></td></tr><tr><td style="font-family:'Outfit';font-weight:600">Ondu</td><td>9</td><td>7</td><td>7</td><td>9</td><td>9</td><td>8</td><td>5</td><td>6</td><td><b>60</b></td></tr><tr><td style="font-family:'Manrope';font-weight:700">Velu</td><td>9</td><td>8</td><td>7</td><td>9</td><td>9</td><td>7</td><td>5</td><td>5</td><td><b>59</b></td></tr><tr><td style="font-family:'Unbounded';font-weight:600">Oyna</td><td>9</td><td>7</td><td>8</td><td>7</td><td>8</td><td>7</td><td>3</td><td>9</td><td><b>58</b></td></tr><tr><td style="font-family:'Bricolage Grotesque';font-weight:700">Navo</td><td>9</td><td>8</td><td>8</td><td>9</td><td>9</td><td>5</td><td>1</td><td>9</td><td><b>58</b></td></tr><tr><td style="font-family:'Space Grotesk';font-weight:700">Kivo</td><td>9</td><td>9</td><td>9</td><td>9</td><td>8</td><td>3</td><td>2</td><td>8</td><td><b>57</b></td></tr><tr><td style="font-family:'Plus Jakarta Sans';font-weight:700">Ulvi</td><td>9</td><td>7</td><td>7</td><td>7</td><td>8</td><td>8</td><td>5</td><td>6</td><td><b>57</b></td></tr><tr><td style="font-family:'Instrument Sans';font-weight:700">Teyva</td><td>8</td><td>8</td><td>7</td><td>7</td><td>8</td><td>5</td><td>8</td><td>5</td><td><b>56</b></td></tr></tbody></table>
+<p class="note">Telegram: 4 harfli username oddiy ro'yxatdan o'tkazilmaydi (minimum 5 belgi, 4 harflilar Fragment auksionida), shuning uchun 4 harfli nomlar uchun "nomapp" varianti tekshirildi. .com ustunida "band" bo'lgan qisqa domenlarning ko'pchiligi sotuvdagi (park qilingan) domenlar.</p>
+</section>
+</main>
+<script>
+(function(){var r=document.documentElement,b=document.getElementById('t');
+try{var s=localStorage.getItem('bb-theme');if(s)r.dataset.theme=s;}catch(e){}
+b.addEventListener('click',function(){var d=r.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');r.dataset.theme=d==='dark'?'light':'dark';try{localStorage.setItem('bb-theme',r.dataset.theme)}catch(e){}});
+var u=new URLSearchParams(location.search),q=u.get('theme');if(q)r.dataset.theme=q;if(u.has('still'))r.classList.add('still');})();
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+version = 1
+SPDX-PackageName = "tilo"
+SPDX-PackageSupplier = "Wonmor <https://github.com/wonmortech>"
+SPDX-PackageDownloadLocation = "https://github.com/wonmortech/tilouz"
+
+[[annotations]]
+path = ["*.md", ".github/**/*.md", ".github/ISSUE_TEMPLATE/**", "REUSE.toml", "site/**"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Wonmor and Tilo contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Research and plan documents.
+[[annotations]]
+path = ["docs/**"]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Wonmor and Tilo contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Self-hosted fonts.
+[[annotations]]
+path = ["site/fonts/**"]
+precedence = "override"
+SPDX-FileCopyrightText = "The respective font authors, see site/fonts/"
+SPDX-License-Identifier = "OFL-1.1"
+
+# Vendored GSAP (GreenSock standard no-charge licence).
+[[annotations]]
+path = ["site/js/vendor/**"]
+precedence = "override"
+SPDX-FileCopyrightText = "GreenSock / Webflow"
+SPDX-License-Identifier = "LicenseRef-GSAP-Standard"

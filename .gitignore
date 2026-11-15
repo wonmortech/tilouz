@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2026 Wonmor and Tilo contributors
+# SPDX-License-Identifier: Apache-2.0
+
+.qa/
+node_modules/
+site/version.txt
+.DS_Store
+Thumbs.db
+test-results/
+playwright-report/
+.coverage/
+coverage/
+__pycache__/
+*.pyc
+docs/08_Brend/tilo_logo/src/test*.py

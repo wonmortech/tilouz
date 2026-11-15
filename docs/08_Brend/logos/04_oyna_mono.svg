@@ -1,0 +1,5 @@
+<svg color="#111111" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Oyna logo (bir rang)</title>
+  <path id="portal" class="p1" fill-rule="evenodd" d="M128 420 V248 A128 128 0 0 1 384 248 V420 Z M184 420 V252 A72 72 0 0 1 328 252 V420 Z" fill="currentColor"/>
+  <circle id="sun" class="p2" cx="256" cy="318" r="42" fill="currentColor"/>
+  <rect id="ground" class="p3" x="88" y="436" width="336" height="22" rx="11" fill="currentColor"/>
+</svg>

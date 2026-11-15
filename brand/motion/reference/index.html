@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tilo motion reference</title>
+<link rel="stylesheet" href="tilo-motion.css">
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<main>
+<h1>Tilo motion reference</h1>
+<svg class="tilo-motion" data-state="intro" data-then="idle" viewBox="0 0 512 512" width="320" height="320" role="img" aria-label="Tilo">
+<g class="t-all"><path id="arc-left" class="t-l" d="M24 264A108 108 0 0 1 240 264L240 265.5L180 265.5L180 264A48 48 0 0 0 84 264A30 30 0 0 1 24 264Z" fill="#0B7A67"/><path id="arc-right" class="t-r" d="M396 264A108 108 0 0 1 180 264L240 264A48 48 0 0 0 336 264A30 30 0 0 1 396 264Z" fill="#1497B8"/><path id="dot" class="t-d" d="M412 172A32 32 0 0 1 476 172A32 32 0 0 1 412 172Z" fill="#F2A81D"/></g>
+</svg>
+<p class="states"><button type="button" data-state="intro">intro</button><button type="button" data-state="idle">idle</button><button type="button" data-state="listening">listening</button><button type="button" data-state="captioning">captioning</button><button type="button" data-state="connecting">connecting</button><button type="button" data-state="loading">loading</button><button type="button" data-state="transition">transition</button></p>
+</main>
+<script src="tilo-motion.js"></script>
+<script src="demo.js"></script>
+</body>
+</html>

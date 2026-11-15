@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 432" width="432" height="432" role="img" aria-labelledby="title"><title id="title">Tilo Android icon background</title>
+<defs><radialGradient id="glow" cx=".3" cy=".18" r=".95"><stop offset="0" stop-color="#034E40"/><stop offset="1" stop-color="#09211B"/></radialGradient></defs><rect width="432" height="432" rx="0.0" fill="url(#glow)"/>
+</svg>

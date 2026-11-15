@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Navo logo</title>
+  <circle id="planet" class="p1" cx="256" cy="256" r="64" fill="#FF7A00"/>
+  <g id="orbit" class="orb">
+    <path id="ring" class="p2" d="M391.9 192.6 A150 150 0 1 1 319.4 120.1" fill="none" stroke="#7B61FF" stroke-width="40" stroke-linecap="round"/>
+    <circle id="moon" class="p3" cx="362" cy="150" r="30" fill="#FFD60A"/>
+  </g>
+</svg>

@@ -1,0 +1,5 @@
+<svg color="#111111" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Yuvel logo (bir rang)</title>
+  <polygon id="facet-top" class="p1" points="256,96 391,174 256,252 121,174" transform="translate(0 -22)" fill="currentColor"/>
+  <polygon id="facet-left" class="p2" points="112,190 248,268 248,424 112,346" fill="currentColor"/>
+  <polygon id="facet-right" class="p3" points="400,190 400,346 264,424 264,268" fill="currentColor"/>
+</svg>

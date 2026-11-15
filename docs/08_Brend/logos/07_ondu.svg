@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Ondu logo</title>
+  <path id="wave-a" class="p1" d="M112 268 A72 72 0 0 1 256 268" fill="none" stroke="#00B37E" stroke-width="56" stroke-linecap="round"/>
+  <path id="wave-b" class="p2" d="M256 268 A72 72 0 0 0 400 268" fill="none" stroke="#00C8F0" stroke-width="56" stroke-linecap="round"/>
+  <circle id="drop" class="p3" cx="400" cy="140" r="30" fill="#FF4D8D"/>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "$description": "Tilo voice examples in Uzbek (Latin), Russian and English. Same order as guidelines/voice-and-tone.md.",
+  "examples": [
+    {"moment": "welcome", "tone": "warm, short",
+     "uz": "Har kim bilan gaplashing. Biz tarjima qilamiz.",
+     "ru": "Говорите с кем угодно. Мы переведём.",
+     "en": "Talk to anyone. We'll interpret."},
+    {"moment": "connecting", "tone": "calm, specific",
+     "uz": "Tarjimonga ulanmoqda. Odatda bir daqiqadan kam.",
+     "ru": "Соединяем с переводчиком. Обычно меньше минуты.",
+     "en": "Connecting you to an interpreter. Usually under a minute."},
+    {"moment": "error", "tone": "honest, gives a way out",
+     "uz": "Qoʻngʻiroq uzildi. Tarjimon kutmoqda: qayta ulaning.",
+     "ru": "Звонок прервался. Переводчик ждёт: подключитесь снова.",
+     "en": "The call dropped. Your interpreter is waiting: reconnect."},
+    {"moment": "sos", "tone": "calm, direct, no exclamation marks",
+     "uz": "Tarjimon bilan favqulodda xizmatga qoʻngʻiroq qilinmoqda. Shu ekranda qoling.",
+     "ru": "Звоним в экстренную службу вместе с переводчиком. Оставайтесь на этом экране.",
+     "en": "Calling emergency services with an interpreter. Stay on this screen."},
+    {"moment": "captions", "tone": "honest",
+     "uz": "Subtitrlarda xato boʻlishi mumkin. Tuzatish uchun soʻzga bosing.",
+     "ru": "В субтитрах возможны ошибки. Нажмите на слово, чтобы исправить.",
+     "en": "Captions may contain mistakes. Tap a word to correct it."},
+    {"moment": "fundraising", "tone": "plain, factual",
+     "uz": "Siz qoʻllagan har bir daqiqa - boʻlib oʻtgan suhbat.",
+     "ru": "Каждая оплаченная вами минута - это состоявшийся разговор.",
+     "en": "Every interpreter-minute you fund is a conversation that happened."}
+  ]
+}

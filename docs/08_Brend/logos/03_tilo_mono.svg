@@ -1,0 +1,9 @@
+<svg color="#111111" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Tilo logo (bir rang)</title>
+  <g id="tilo-mark">
+    <rect id="line-1" class="b b1" x="125" y="120" width="262" height="56" rx="28" fill="currentColor"/>
+    <rect id="line-2" class="b b2" x="90" y="192" width="332" height="56" rx="28" fill="currentColor"/>
+    <rect id="line-3" class="b b3" x="90" y="264" width="214" height="56" rx="28" fill="currentColor"/>
+    <circle id="cursor" class="p2" cx="358" cy="292" r="28" fill="currentColor"/>
+    <rect id="line-4" class="b b4" x="125" y="336" width="262" height="56" rx="28" fill="currentColor"/>
+  </g>
+</svg>

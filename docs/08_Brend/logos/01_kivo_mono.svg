@@ -1,0 +1,7 @@
+<svg color="#111111" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Kivo logo (bir rang)</title>
+  <g id="kivo-mark" transform="rotate(-24 256 256)">
+    <path id="half-a" class="p1" d="M246 96 A160 160 0 0 0 246 416 Z" transform="translate(-16 -12)" fill="currentColor"/>
+    <path id="half-b" class="p2" d="M266 96 A160 160 0 0 1 266 416 Z" transform="translate(16 12)" fill="currentColor"/>
+  </g>
+  <circle id="spark" class="p3" cx="404" cy="108" r="26" fill="currentColor"/>
+</svg>

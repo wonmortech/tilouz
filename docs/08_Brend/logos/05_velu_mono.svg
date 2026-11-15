@@ -1,0 +1,5 @@
+<svg color="#111111" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="t"><title id="t">Velu logo (bir rang)</title>
+  <circle id="ring-a" class="p1" cx="200" cy="256" r="128" fill="none" stroke="currentColor" stroke-width="36"/>
+  <circle id="ring-b" class="p2" cx="312" cy="256" r="128" fill="none" stroke="currentColor" stroke-width="36"/>
+  <path id="lens" class="p3" d="M256 140.8 A128 128 0 0 1 256 371.2 A128 128 0 0 1 256 140.8 Z" fill="currentColor"/>
+</svg>

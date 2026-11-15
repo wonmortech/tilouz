@@ -1,0 +1,231 @@
+{
+ "rig": {
+  "R": 78,
+  "w": 60,
+  "r": 32,
+  "lc": [
+   132.0,
+   264.0
+  ],
+  "rc": [
+   288.0,
+   264.0
+  ],
+  "J": [
+   210.0,
+   264.0
+  ],
+  "dot": [
+   444.0,
+   172.0,
+   32
+  ],
+  "band": [
+   156.0,
+   372.0
+  ],
+  "off": [
+   -46.0,
+   8.0
+  ]
+ },
+ "wordmark": {
+  "H": 100.0,
+  "s": 22.0,
+  "asc": 134.5,
+  "t_top": 120.0,
+  "Rc": 34.1,
+  "tx": 34.1,
+  "ix": 102.30000000000001,
+  "lx": 154.3,
+  "ox": 238.8,
+  "oy": -50.0,
+  "ro": 40.5,
+  "dot": [
+   102.30000000000001,
+   -122.77,
+   11.770000000000001
+  ],
+  "top": -134.54,
+  "width": 290.3
+ },
+ "lockup": {
+  "k": 1.1232,
+  "gap": 108.0,
+  "base": 320.15999999999997,
+  "wx": 584.0
+ },
+ "symbol_bbox": [
+  24.0,
+  140.0,
+  476.0,
+  372.0
+ ],
+ "motion": [
+  {
+   "state": "intro",
+   "label": "Intro (assemble)",
+   "duration": "1100 ms",
+   "easing": "expo + spring",
+   "text": "Halves turn 180 degrees and slide 70 u in from both sides (760 ms, expo); the dot drops in from 90 u above at 560 ms (520 ms, spring). Runs once, then hands over to idle."
+  },
+  {
+   "state": "idle",
+   "label": "Idle",
+   "duration": "4.8 s loop",
+   "easing": "sine",
+   "text": "Halves breathe 5 u apart, the dot floats 6 u. Barely there: the logo is alive, not busy."
+  },
+  {
+   "state": "listening",
+   "label": "Listening",
+   "duration": "900 ms loop",
+   "easing": "sine",
+   "text": "Each half scales vertically 0.78 to 1.08 like an audio level, right half 150 ms behind; the dot pulses 1.3x. Use while the app listens to speech."
+  },
+  {
+   "state": "captioning",
+   "label": "Captioning",
+   "duration": "1 s loop",
+   "easing": "steps + sine",
+   "text": "The dot blinks like a text cursor (steps), the halves type 3 u side to side. Use while live captions are being written."
+  },
+  {
+   "state": "connecting",
+   "label": "Connecting call",
+   "duration": "1.8 s loop",
+   "easing": "in-out",
+   "text": "The right half slides 2R left and joins the left half into an o-ring, the ring turns 360 degrees, then returns to the wave. The dot rests in the counter."
+  },
+  {
+   "state": "loading",
+   "label": "Loading",
+   "duration": "1.2 s loop",
+   "easing": "linear",
+   "text": "The joined ring spins continuously; the dot sits in the counter and breathes. For buttons and small spinners."
+  },
+  {
+   "state": "transition",
+   "label": "Transition",
+   "duration": "700 ms once",
+   "easing": "in-out",
+   "text": "Halves part 24 u and fade, the dot lifts 40 u, then everything returns. Use between screens or when a call ends."
+  }
+ ],
+ "min_sizes": [
+  {
+   "item": "symbol",
+   "label": "Symbol",
+   "px": 20,
+   "mm": 6,
+   "note": "16 px only inside the favicon tile"
+  },
+  {
+   "item": "wordmark",
+   "label": "Wordmark",
+   "px": 48,
+   "mm": 12,
+   "note": "x-height stays above 8 px"
+  },
+  {
+   "item": "lockup-horizontal",
+   "label": "Horizontal lockup",
+   "px": 96,
+   "mm": 24,
+   "note": ""
+  },
+  {
+   "item": "lockup-stacked",
+   "label": "Stacked lockup",
+   "px": 64,
+   "mm": 18,
+   "note": ""
+  }
+ ],
+ "misuse": [
+  "stretch",
+  "recolour",
+  "rotate",
+  "effects",
+  "outline",
+  "rearrange",
+  "font",
+  "busy",
+  "monogram-alone"
+ ],
+ "icons": {
+  "call": "Video call",
+  "captions": "Live captions",
+  "card": "Sign dictionary card",
+  "sos": "SOS / emergency",
+  "sign": "Hand / sign language",
+  "dataset": "Dataset",
+  "interpreter": "Interpreter (two people)",
+  "wave": "Tilo wave (brand glyph)"
+ },
+ "type_scale": {
+  "display": {
+   "size": "clamp(2.75rem, 1.6rem + 4.6vw, 5.5rem)",
+   "line": "1.02",
+   "weight": 600,
+   "tracking": "-0.035em",
+   "font": "brand"
+  },
+  "h1": {
+   "size": "clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem)",
+   "line": "1.08",
+   "weight": 600,
+   "tracking": "-0.025em",
+   "font": "brand"
+  },
+  "h2": {
+   "size": "clamp(1.6rem, 1.3rem + 1.2vw, 2.25rem)",
+   "line": "1.15",
+   "weight": 600,
+   "tracking": "-0.02em",
+   "font": "brand"
+  },
+  "h3": {
+   "size": "1.25rem",
+   "line": "1.3",
+   "weight": 600,
+   "tracking": "-0.01em",
+   "font": "brand"
+  },
+  "body-lg": {
+   "size": "1.125rem",
+   "line": "1.6",
+   "weight": 400,
+   "tracking": "0",
+   "font": "text"
+  },
+  "body": {
+   "size": "1rem",
+   "line": "1.6",
+   "weight": 400,
+   "tracking": "0",
+   "font": "text"
+  },
+  "caption-live": {
+   "size": "clamp(1.25rem, 1rem + 1vw, 1.75rem)",
+   "line": "1.35",
+   "weight": 500,
+   "tracking": "0",
+   "font": "text"
+  },
+  "small": {
+   "size": "0.875rem",
+   "line": "1.5",
+   "weight": 400,
+   "tracking": "0.005em",
+   "font": "text"
+  },
+  "label": {
+   "size": "0.75rem",
+   "line": "1.3",
+   "weight": 600,
+   "tracking": "0.08em",
+   "font": "brand"
+  }
+ }
+}
