@@ -189,7 +189,7 @@ def s_lockups(t):
 def s_space(t):
     rows = "".join(f'<tr><td>{e(t["items"][m[0]])}</td><td>{m[2]} px</td><td>{m[3]} mm</td></tr>' for m in B.MIN_SIZES)
     return sec("space", t["space_h"], t["space_p"], f'''<div class="split">
-<figure class="card plain"><img src="{A}/logo/construction/tilo-clear-space.svg" alt="" loading="lazy" class="w100"></figure>
+<figure class="card plain cs"><img src="{A}/logo/construction/tilo-clear-space.svg" alt="" loading="lazy" class="w100"></figure>
 <div class="card"><table class="tbl"><thead><tr>{"".join(f"<th>{e(h)}</th>" for h in t["min_th"])}</tr></thead><tbody>{rows}</tbody></table>
 <figure class="minsz"><img src="{A}/logo/construction/tilo-minimum-size.svg" alt="" loading="lazy"></figure></div></div>''')
 
@@ -205,6 +205,8 @@ def s_color(t):
         hx = S[scale][step]
         dark_txt = pal.cr("#FFFFFF", hx) < pal.cr("#15171C", hx)
         r = pal.cr(hx, pal.LIGHT["bg"])
+        if r < 1.2:  # the background itself: show what text on it scores
+            r = pal.cr(pal.LIGHT["text"], hx)
         big.append(f'''<button type="button" class="sw-big{' on-light' if dark_txt else ''}" data-copy="{hx}" style="background:{hx}">
 <span class="sw-name">{e(name)}</span><span class="sw-hex">{hx}</span><span class="sw-use">{e(use)}</span><span class="sw-cr">{r:.2f}:1 &middot; {pal.grade(r)}</span></button>''')
     rows = []
@@ -265,10 +267,10 @@ def s_motion(t):
 
 
 def s_apps(t):
-    apps = "".join(f'<span class="app ghost"><i class="g{i % 6}"></i><b></b></span>' for i in range(11))
-    phone = (f'<div class="phone" aria-hidden="true"><div class="scr"><div class="sb"><b>9:41</b><i></i></div><div class="home">'
-             + apps[: len(apps) // 2] + f'<span class="app me"><img src="{A}/app/tilo-app-icon-rounded-1024.png" alt="" width="58" height="58"><b>Tilo</b></span>'
-             + apps[len(apps) // 2:] + '</div><div class="dock"><i></i><i></i><i></i><i></i></div></div></div>')
+    apps = [f'<span class="app ghost"><i class="g{i % 6}"></i><b></b></span>' for i in range(15)]
+    apps.insert(5, f'<span class="app me"><img src="{A}/app/tilo-app-icon-rounded-1024.png" alt="" width="58" height="58"><b>Tilo</b></span>')
+    phone = (f'<div class="phone" aria-hidden="true"><div class="scr"><div class="sb"><b>9:41</b><i></i></div><div class="ph-home">'
+             + "".join(apps) + '</div><div class="dock"><i></i><i></i><i></i><i></i></div></div></div>')
     masks = "".join(f'<figure class="mask m-{m}"><div class="ad"><img src="{A}/app/tilo-android-adaptive-background-432.png" alt=""><img src="{A}/app/tilo-android-adaptive-foreground-432.png" alt=""></div></figure>'
                     for m in ("circle", "squircle", "drop"))
     favs = "".join(f'<figure><img src="{A}/favicon/favicon-{s}.png" width="{s}" height="{s}" alt=""><figcaption>{s}</figcaption></figure>' for s in (16, 32, 48))
@@ -300,9 +302,13 @@ def s_icons(t):
     return sec("iconography", t["ico_h"], t["ico_lead"], f'<div class="icon-grid">{cells}</div>')
 
 
+D3L = {"en": ("extrusion depth", "gap at the joint"), "uz": ("ekstruziya chuqurligi", "tutashuvdagi tirqish"),
+       "ru": ("глубина выдавливания", "зазор в стыке")}
+
+
 def s_3d(t):
     return sec("three-d", t["d3_h"], t["d3_p"], f'''<div class="card d3"><img src="{A}/3d/tilo-symbol-render.png" alt="" loading="lazy" width="720" height="430">
-<div><ul class="geo small"><li><b>0.35w</b><span>depth</span></li><li><b>3</b><span>arc-left &middot; arc-right &middot; dot</span></li><li><b>0.5 u</b><span>joint gap</span></li></ul>
+<div><ul class="geo small"><li><b>0.35w</b><span>{D3L[t["lang"]][0]}</span></li><li><b>3</b><span><code>arc-left</code> <code>arc-right</code> <code>dot</code></span></li><li><b>0.5 u</b><span>{D3L[t["lang"]][1]}</span></li></ul>
 <a class="btn" href="{A}/3d/tilo-symbol.glb" download>{icon("download")}{e(t["d3_dl"])}</a></div></div>''')
 
 

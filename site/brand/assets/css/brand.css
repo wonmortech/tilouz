@@ -235,7 +235,7 @@ figcaption { font-size: 13px; color: var(--mut); }
 .scr { position: relative; height: 100%; border-radius: 38px; overflow: hidden; padding: 14px 16px; background: radial-gradient(120% 80% at 10% 0%, #2F5B53 0%, #12302B 45%, #0B1715 100%); }
 .sb { display: flex; justify-content: space-between; color: #fff; font: 600 12.5px var(--f-text); padding: 4px 10px 18px; }
 .sb i { position: absolute; left: 50%; top: 12px; transform: translateX(-50%); width: 84px; height: 24px; border-radius: 14px; background: #000; }
-.home { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 8px; }
+.ph-home { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px 8px; }
 .app { display: flex; flex-direction: column; align-items: center; gap: 5px; }
 .app i { width: 50px; height: 50px; border-radius: 13px; display: block; opacity: .55; }
 .app b { width: 30px; height: 5px; border-radius: 3px; background: rgba(255,255,255,.35); }
@@ -387,3 +387,9 @@ figcaption { font-size: 13px; color: var(--mut); }
   .actions .btn { width: 100%; justify-content: center; }
 }
 @media print { .top, .toast, .actions, .mo-act { display: none; } .sec { break-inside: avoid; } }
+
+/* ---- refinements (pass 2) */
+.card.plain.cs { background: #F7F5F0; display: grid; place-items: center; }
+.hero h1 { font-size: clamp(2.5rem, 1.2rem + 3.6vw, 4.4rem); }
+.hero-copy { max-width: 36rem; }
+.sw-big.on-light { border-color: rgba(21,23,28,.12); }
