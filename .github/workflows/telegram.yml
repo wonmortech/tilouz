@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2026 Wonmor and Tilo contributors
+# SPDX-License-Identifier: Apache-2.0
+
+# Posts the scheduled item from content/telegram/posts.json to @tiloapp twice a day: 09:00 and 19:00 Tashkent.
+name: Telegram
+
+on:
+  schedule:
+    - cron: "0 4 * * *"
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      id:
+        description: "Post id to send now (empty = today's scheduled post)"
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: telegram
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - name: Post
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          POST_ID: ${{ inputs.id }}
+        run: |
+          if [ -n "$POST_ID" ]; then
+            node tools/telegram-post.mjs --id "$POST_ID"
+          else
+            node tools/telegram-post.mjs
+          fi

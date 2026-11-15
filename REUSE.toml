@@ -16,6 +16,13 @@ precedence = "override"
 SPDX-FileCopyrightText = "2026 Wonmor and Tilo contributors"
 SPDX-License-Identifier = "CC-BY-4.0"
 
+# Channel posts and other written content.
+[[annotations]]
+path = ["content/**"]
+precedence = "override"
+SPDX-FileCopyrightText = "2026 Wonmor and Tilo contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
 # Self-hosted fonts.
 [[annotations]]
 path = ["site/fonts/**"]
