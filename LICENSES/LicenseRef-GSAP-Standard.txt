@@ -1,0 +1,14 @@
+GSAP Standard "No Charge" License (reference)
+
+The files in site/js/vendor/ are an unmodified copy of GSAP, published by
+GreenSock (now part of Webflow). They are not covered by this repository's
+Apache-2.0 or CC-BY-4.0 licences.
+
+GSAP is distributed under GreenSock's Standard "No Charge" License. The
+authoritative licence text is published by the licensor at:
+
+    https://gsap.com/standard-license
+
+Use of these files is governed by that text. This file only records the
+identifier "LicenseRef-GSAP-Standard" referenced in REUSE.toml; it does not
+grant, change or summarise any rights.
