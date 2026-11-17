@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>tilo — muloqot ilovasi (sinov)</title>
+<meta name="description" content="Tilo sinov ilovasi: yuzma-yuz subtitr, vaziyat kartalari, video xabar va favqulodda karta. Hammasi qurilmada ishlaydi.">
+<meta name="theme-color" content="#F7F5F0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101214" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="/app/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/app/icons/icon-192.png">
+<link rel="preload" href="/fonts/lexend-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/app/app.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-cards" viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="7" rx="1.5"/><rect x="13" y="4" width="8" height="7" rx="1.5"/><rect x="3" y="13" width="8" height="7" rx="1.5"/><rect x="13" y="13" width="8" height="7" rx="1.5"/></symbol>
+  <symbol id="i-video" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></symbol>
+  <symbol id="i-sos" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.01"/></symbol>
+  <symbol id="i-person" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></symbol>
+  <symbol id="i-speak" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></symbol>
+  <symbol id="i-flip" viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></symbol>
+  <symbol id="i-rec" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="i-clinic" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><rect x="3" y="8.5" width="18" height="7" rx="3.5" transform="rotate(-35 12 12)"/><path d="M9.5 8.6l5 6.8"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9l9-5 9 5M5 10v8M10 10v8M14 10v8M19 10v8M3 20h18"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 16V11l2-5h10l2 5v5M3 16h18M7 19v-3M17 19v-3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></symbol>
+  <symbol id="i-office" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M10 21v-4h4v4"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/></symbol>
+</svg>
+
+<a class="skip" href="#main" data-t="skip">Mazmunga o‘tish</a>
+
+<header class="bar">
+  <a class="brand" href="#home" aria-label="tilo">
+    <svg class="mark" viewBox="20 136 460 236" aria-hidden="true"><path class="m1" d="M24 264A108 108 0 0 1 240 264L240 265.5L180 265.5L180 264A48 48 0 0 0 84 264A30 30 0 0 1 24 264Z"/><path class="m2" d="M396 264A108 108 0 0 1 180 264L240 264A48 48 0 0 0 336 264A30 30 0 0 1 396 264Z"/><path class="m3" d="M412 172A32 32 0 0 1 476 172A32 32 0 0 1 412 172Z"/></svg>
+    <span>tilo</span><em class="beta" data-t="beta">sinov</em>
+  </a>
+  <div class="bar-acts">
+    <button type="button" class="ib" id="interp-btn" data-ta="interp" aria-label="Tarjimon"><svg aria-hidden="true"><use href="#i-person"/></svg><span data-t="interp">Tarjimon</span></button>
+    <button type="button" class="ib" id="settings-btn" data-ta="settings" aria-label="Sozlamalar"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <section class="view" id="v-home" data-view="home" aria-labelledby="h-home">
+    <h1 id="h-home" class="sr" data-t="homeTitle">Tilo sinov ilovasi</h1>
+    <div class="tiles">
+      <a class="tile" href="#talk"><svg aria-hidden="true"><use href="#i-chat"/></svg><b data-t="talk">Yuzma-yuz suhbat</b><span data-t="talkSub">Gapni subtitr qiladi, yozganingizni o‘qib beradi</span></a>
+      <a class="tile" href="#cards"><svg aria-hidden="true"><use href="#i-cards"/></svg><b data-t="cards">Vaziyat kartalari</b><span data-t="cardsSub">Shifoxona, bank, taksi, politsiya, mahalla</span></a>
+      <a class="tile" href="#video"><svg aria-hidden="true"><use href="#i-video"/></svg><b data-t="video">Video xabar</b><span data-t="videoSub">Imo-ishora videosini yozing va yuboring</span></a>
+      <a class="tile sos" href="#sos"><svg aria-hidden="true"><use href="#i-sos"/></svg><b data-t="sos">Favqulodda karta</b><span data-t="sosSub">101, 102, 103, 112 va «Men karman» kartasi</span></a>
+    </div>
+    <div class="notice">
+      <p data-t="privacy">Hammasi telefoningizda ishlaydi. Tilo serveriga hech narsa yuborilmaydi va saqlanmaydi.</p>
+      <p data-t="draftNote">Bu sinov versiyasi. Karta matnlari qoralama: ularni kar maslahat kengashi hali tekshirmagan. Imo-ishora videolarini keyin kar imo-ishorachilar yozadi.</p>
+      <p><a href="/" data-t="aboutLink">Tilo loyihasi haqida</a> · <a href="https://github.com/wonmortech/tilouz/issues" data-t="feedbackLink">Fikr yoki xato haqida yozish</a></p>
+    </div>
+  </section>
+
+  <section class="view talk" id="v-talk" data-view="talk" hidden aria-labelledby="h-talk">
+    <h1 id="h-talk" class="sr" data-t="talk">Yuzma-yuz suhbat</h1>
+    <div class="half other flipped" id="talk-other">
+      <div class="half-head">
+        <span class="who" data-t="otherSide">Eshituvchi uchun</span>
+        <button type="button" class="ib sm" id="flip-btn" aria-pressed="true"><svg aria-hidden="true"><use href="#i-flip"/></svg><span data-t="flip">Burish</span></button>
+      </div>
+      <p class="hint" data-t="hearingHint">Aniq va sekin gapiring, telefonga qarab turing, navbat bilan gapiring.</p>
+      <p class="said" id="said-other" aria-live="polite"></p>
+      <div class="row">
+        <button type="button" class="big mic" id="mic-btn" aria-pressed="false"><svg aria-hidden="true"><use href="#i-mic"/></svg><span id="mic-label" data-t="micStart">Gapirish</span></button>
+        <label class="sel"><span class="sr" data-t="sttLang">Nutq tili</span>
+          <select id="stt-lang"><option value="uz-UZ">O‘zbekcha</option><option value="ru-RU">Русский</option></select>
+        </label>
+      </div>
+    </div>
+    <div class="half me">
+      <div class="half-head">
+        <span class="who" data-t="meSide">Siz uchun</span>
+        <span class="asr-flag" data-t="asrFlag">Nutqni tanish xato qilishi mumkin. Qatorni bosib tuzating.</span>
+      </div>
+      <p class="cap-empty" id="cap-empty" data-t="capEmpty">Eshituvchi gapirganda so‘zlari shu yerda katta harflar bilan chiqadi.</p>
+      <ol class="captions" id="captions" aria-live="polite"></ol>
+      <p class="interim" id="interim" aria-hidden="true"></p>
+      <form class="compose" id="compose">
+        <label class="sr" for="say-input" data-t="typeLabel">Javobingizni yozing</label>
+        <input id="say-input" type="text" autocomplete="off" enterkeyhint="send" data-tp="typePh" placeholder="Javobingizni yozing…">
+        <button type="submit" class="big"><svg aria-hidden="true"><use href="#i-speak"/></svg><span data-t="show">Ko‘rsatish</span></button>
+      </form>
+      <div class="quick" id="quick"></div>
+      <div class="row tail">
+        <label class="chk"><input type="checkbox" id="tts-on" checked> <span data-t="ttsOn">Yozganimni ovoz bilan o‘qish</span></label>
+        <button type="button" class="ib sm" id="clear-btn"><svg aria-hidden="true"><use href="#i-trash"/></svg><span data-t="clear">Tozalash</span></button>
+      </div>
+      <p class="small" id="tts-note" hidden></p>
+    </div>
+  </section>
+
+  <section class="view" id="v-cards" data-view="cards" hidden aria-labelledby="h-cards">
+    <div class="vhead"><a class="ib sm" href="#home" id="cards-back"><svg aria-hidden="true"><use href="#i-back"/></svg><span data-t="back">Orqaga</span></a><h1 id="h-cards" data-t="cards">Vaziyat kartalari</h1></div>
+    <div class="sets" id="sets"></div>
+    <div class="cardlist" id="cardlist" hidden></div>
+  </section>
+
+  <section class="view showcard" id="v-show" data-view="show" hidden aria-labelledby="show-text">
+    <div class="show-top">
+      <button type="button" class="ib sm" id="show-back"><svg aria-hidden="true"><use href="#i-back"/></svg><span data-t="back">Orqaga</span></button>
+      <button type="button" class="ib sm" id="show-flip" aria-pressed="false"><svg aria-hidden="true"><use href="#i-flip"/></svg><span data-t="flip">Burish</span></button>
+    </div>
+    <div class="show-body" id="show-body">
+      <p class="show-text" id="show-text"></p>
+      <p class="show-alt" id="show-alt"></p>
+      <div class="sign-slot" data-t="signPending">Imo-ishora videosi: kar imo-ishorachi yozadi (kutilmoqda)</div>
+    </div>
+    <div class="row center">
+      <button type="button" class="big" id="show-speak"><svg aria-hidden="true"><use href="#i-speak"/></svg><span data-t="speak">Ovoz bilan o‘qish</span></button>
+    </div>
+  </section>
+
+  <section class="view" id="v-video" data-view="video" hidden aria-labelledby="h-video">
+    <div class="vhead"><a class="ib sm" href="#home"><svg aria-hidden="true"><use href="#i-back"/></svg><span data-t="back">Orqaga</span></a><h1 id="h-video" data-t="video">Video xabar</h1></div>
+    <div class="cam">
+      <video id="cam-preview" class="mirror" playsinline muted></video>
+      <video id="cam-result" playsinline controls hidden></video>
+      <p class="cam-empty" id="cam-empty" data-t="camOff">Kamera o‘chiq</p>
+      <span class="rec-badge" id="rec-badge" hidden><span aria-hidden="true">●</span> <span id="rec-time">0:00</span></span>
+    </div>
+    <p class="small" data-t="mirrorNote">Oldindan ko‘rish ko‘zgudek ko‘rinadi. Yozilgan videoda chap va o‘ng qo‘l to‘g‘ri ko‘rinadi.</p>
+    <div class="row center wrap">
+      <button type="button" class="big" id="cam-on"><svg aria-hidden="true"><use href="#i-video"/></svg><span data-t="camOn">Kamerani yoqish</span></button>
+      <button type="button" class="big rec" id="rec-btn" hidden><svg aria-hidden="true"><use href="#i-rec"/></svg><span data-t="rec">Yozish</span></button>
+      <button type="button" class="big" id="stop-btn" hidden><svg aria-hidden="true"><use href="#i-stop"/></svg><span data-t="stop">To‘xtatish</span></button>
+      <button type="button" class="big" id="share-btn" hidden><svg aria-hidden="true"><use href="#i-share"/></svg><span data-t="share">Yuborish</span></button>
+      <a class="big ghost" id="save-link" href="#video" hidden download="tilo-video.webm" data-t="save">Saqlash</a>
+      <button type="button" class="big ghost" id="again-btn" hidden><span data-t="again">Qaytadan</span></button>
+    </div>
+    <p class="small" id="cam-size" aria-live="polite"></p>
+  </section>
+
+  <section class="view sosv" id="v-sos" data-view="sos" hidden aria-labelledby="h-sos">
+    <div class="vhead"><a class="ib sm" href="#home"><svg aria-hidden="true"><use href="#i-back"/></svg><span data-t="back">Orqaga</span></a><h1 id="h-sos" data-t="sos">Favqulodda karta</h1></div>
+    <div class="sos-card">
+      <p class="sos-main" data-t="sosMain">Men karman. Menga matn yoki imo-ishora kerak.</p>
+      <p class="sos-alt" lang="ru">Я глухой. Мне нужен текст или жестовый язык.</p>
+      <p class="sos-addr" id="sos-addr-view"></p>
+    </div>
+    <label class="field"><span data-t="addrLabel">Manzil yoki joy (ixtiyoriy, faqat shu telefonda saqlanadi)</span>
+      <input id="sos-addr" type="text" autocomplete="street-address"></label>
+    <div class="nums">
+      <a class="num" href="tel:101"><b>101</b><span data-t="n101">Yong‘in</span></a>
+      <a class="num" href="tel:102"><b>102</b><span data-t="n102">Politsiya</span></a>
+      <a class="num" href="tel:103"><b>103</b><span data-t="n103">Tez yordam</span></a>
+      <a class="num" href="tel:112"><b>112</b><span data-t="n112">Yagona raqam</span></a>
+    </div>
+    <p class="notice" data-t="sosWarn">Bu karta favqulodda xizmat o‘rnini bosmaydi. Hozircha 112 ga matn yoki video orqali murojaat qilish imkoni topilmagan. Atrofdagi odamga kartani ko‘rsatib, qo‘ng‘iroq qilishni so‘rang.</p>
+  </section>
+
+</main>
+
+<dialog id="dlg-interp" aria-labelledby="dlg-interp-h">
+  <h2 id="dlg-interp-h" data-t="interpTitle">Jonli tarjimon</h2>
+  <p data-t="interpBody">Jonli imo-ishora tarjimoniga videoqo‘ng‘iroq hali ishga tushmagan. U loyihaning keyingi bosqichida, hamkor tarjimonlar bilan, ish soatlari ochiq e’lon qilingan holda ochiladi.</p>
+  <p data-t="interpNow">Hozircha shifoxona, sud yoki politsiyada malakali tarjimon so‘rashingiz mumkin. «Politsiya» va «Mahalla va idora» kartalari bunga yordam beradi.</p>
+  <form method="dialog"><button class="big" data-t="ok">Tushunarli</button></form>
+</dialog>
+
+<dialog id="dlg-stt" aria-labelledby="dlg-stt-h">
+  <h2 id="dlg-stt-h" data-t="sttTitle">Nutqni tanish haqida</h2>
+  <p data-t="sttBody">Nutqni matnga brauzerning o‘zi aylantiradi. Ko‘p brauzerlar buning uchun ovozni o‘z ishlab chiqaruvchisining serveriga (masalan, Google) yuboradi. Tilo serveriga ovoz ham, matn ham yuborilmaydi.</p>
+  <p data-t="sttBody2">Rozi bo‘lmasangiz, yozish rejimidan foydalaning: eshituvchi javobini telefonga yozadi.</p>
+  <form method="dialog" class="row">
+    <button class="big" value="yes" data-t="agree">Roziman, yoqish</button>
+    <button class="big ghost" value="no" data-t="cancel">Bekor qilish</button>
+  </form>
+</dialog>
+
+<dialog id="dlg-settings" aria-labelledby="dlg-set-h">
+  <h2 id="dlg-set-h" data-t="settings">Sozlamalar</h2>
+  <label class="field"><span data-t="uiLang">Interfeys tili</span>
+    <select id="ui-lang"><option value="uz">O‘zbekcha (lotin)</option><option value="uzc">Ўзбекча (кирилл)</option><option value="ru">Русский</option></select></label>
+  <label class="field"><span data-t="textSize">Matn o‘lchami</span>
+    <select id="text-size"><option value="1" data-t="sizeM">O‘rta</option><option value="2" data-t="sizeL">Katta</option><option value="3" data-t="sizeXL">Juda katta</option></select></label>
+  <label class="field"><span data-t="theme">Mavzu</span>
+    <select id="theme-sel"><option value="auto" data-t="themeAuto">Qurilmadagidek</option><option value="light" data-t="themeLight">Yorug‘</option><option value="dark" data-t="themeDark">Qorong‘i</option></select></label>
+  <p class="small" data-t="cyrlNote">Kirill yozuvi lotindan avtomatik o‘giriladi. Xato ko‘rsangiz, xabar bering.</p>
+  <form method="dialog"><button class="big" data-t="ok">Tushunarli</button></form>
+</dialog>
+
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="/app/translit.js"></script>
+<script src="/app/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "tilo — muloqot (sinov)",
+  "short_name": "tilo",
+  "description": "Yuzma-yuz subtitr, vaziyat kartalari, video xabar va favqulodda karta. Hammasi qurilmada ishlaydi.",
+  "lang": "uz",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "background_color": "#F7F5F0",
+  "theme_color": "#0B7A67",
+  "icons": [
+    { "src": "/app/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/app/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/app/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
