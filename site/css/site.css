@@ -204,6 +204,8 @@ html.story-view .top { display: flex; position: sticky; top: 0; z-index: 8; alig
 .top .brand { display: flex; align-items: center; color: var(--ink); }
 .top .brand svg { height: 26px; width: auto; }
 .top .acts { display: flex; align-items: center; gap: 2px; }
+.tb.app-link { text-decoration: none; color: var(--teal); background: var(--teal-soft); font-weight: 600; }
+.tb.app-link:hover { color: var(--teal); filter: brightness(.97); }
 .top .tb { height: 40px; padding: 0 9px; }
 .top .tb .lbl { font-size: 13px; }
 @media (max-width: 400px) { .top .tb .lbl.opt { display: none; } }
