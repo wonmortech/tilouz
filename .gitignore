@@ -13,3 +13,4 @@ coverage/
 __pycache__/
 *.pyc
 docs/08_Brend/tilo_logo/src/test*.py
+dist/

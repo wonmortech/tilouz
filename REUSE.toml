@@ -71,3 +71,10 @@ path = ["tools/deck/**"]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2026 Wonmor and Tilo contributors"
 SPDX-License-Identifier = "Apache-2.0"
+
+# Concept demo tooling: npm manifests (JSON cannot carry a header).
+[[annotations]]
+path = ["package.json", "package-lock.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 Wonmor and Tilo contributors"
+SPDX-License-Identifier = "Apache-2.0"
