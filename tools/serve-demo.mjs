@@ -12,7 +12,8 @@ import { fileURLToPath } from 'node:url';
 import { OUT } from './build-demo.mjs';
 
 export const BASE = '/demo/tilo/';
-const CSP = readFileSync(fileURLToPath(new URL('../deploy/Caddyfile', import.meta.url)), 'utf8').match(/(?:@site[^]*?)?Content-Security-Policy\s+"([^"]+)"/)[1];
+const CADDY = readFileSync(fileURLToPath(new URL('../deploy/Caddyfile', import.meta.url)), 'utf8');
+const CSP = (CADDY.match(/header @site \{[^}]*?Content-Security-Policy\s+"([^"]+)"/) || CADDY.match(/Content-Security-Policy\s+"([^"]+)"/))[1];
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.svg': 'image/svg+xml', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.json': 'application/json' };
 
