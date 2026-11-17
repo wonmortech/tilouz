@@ -1,0 +1,20 @@
+{
+  "name": "tilo-site",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Concept demo build, smoke tests and README screenshots for Tilo (the site in site/ has no build step).",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "check": "node tools/check-site.mjs",
+    "demo:build": "node tools/build-demo.mjs",
+    "demo": "node tools/build-demo.mjs && node tools/serve-demo.mjs",
+    "test:demo": "playwright test -c playwright.demo.config.mjs",
+    "site:screenshots": "node tools/site-screenshots.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0"
+  }
+}

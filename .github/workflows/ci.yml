@@ -36,3 +36,10 @@ jobs:
 
       - name: REUSE compliance
         uses: fsfe/reuse-action@676e2d560c9a403aa252096d99fcab3e1132b0f5 # v6.0.0
+
+      # The concept demo (demo/): every module renders under the production CSP with no console errors.
+      - name: Install demo test tools
+        run: npm ci --ignore-scripts && npx playwright install --with-deps chromium
+
+      - name: Demo smoke test
+        run: npm run test:demo
