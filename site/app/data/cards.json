@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "status": "draft",
+  "note": "Matnlar qoralama: kar maslahat kengashi va 2 kar ekspert tekshiruvidan o'tmagan (06a M3). Imo-ishora videolari kar imo-ishorachi tomonidan yoziladi, hozircha yo'q.",
+  "sets": [
+    {
+      "id": "general", "icon": "chat",
+      "title": { "uz": "Umumiy", "ru": "Общее" },
+      "cards": [
+        { "id": "general.deaf", "uz": "Men karman. Iltimos, yozib yoki imo-ishora bilan gapiring.", "ru": "Я глухой. Пожалуйста, напишите или объясните жестами." },
+        { "id": "general.write", "uz": "Iltimos, yozib bering.", "ru": "Пожалуйста, напишите." },
+        { "id": "general.slow", "uz": "Iltimos, sekinroq va aniq gapiring. Menga qarab gapiring.", "ru": "Пожалуйста, говорите медленнее и чётко. Смотрите на меня." },
+        { "id": "general.repeat", "uz": "Tushunmadim. Yana bir marta takrorlang.", "ru": "Я не понял. Повторите, пожалуйста." },
+        { "id": "general.understood", "uz": "Tushundim. Rahmat.", "ru": "Я понял. Спасибо." },
+        { "id": "general.interpreter", "uz": "Menga imo-ishora tili tarjimoni kerak.", "ru": "Мне нужен переводчик жестового языка." },
+        { "id": "general.wait", "uz": "Iltimos, biroz kuting.", "ru": "Подождите, пожалуйста." },
+        { "id": "general.phone", "uz": "Men telefonda gaplasha olmayman. Xabar yozing.", "ru": "Я не могу говорить по телефону. Напишите сообщение." }
+      ]
+    },
+    {
+      "id": "clinic", "icon": "clinic",
+      "title": { "uz": "Shifoxona", "ru": "Больница" },
+      "cards": [
+        { "id": "clinic.pain", "uz": "Menda og‘riq bor.", "ru": "У меня боль." },
+        { "id": "clinic.where", "uz": "Og‘riq shu yerda.", "ru": "Болит здесь." },
+        { "id": "clinic.strong", "uz": "Og‘riq juda kuchli.", "ru": "Боль очень сильная." },
+        { "id": "clinic.days", "uz": "Bir necha kundan beri kasalman.", "ru": "Я болею уже несколько дней." },
+        { "id": "clinic.allergy", "uz": "Menda dori allergiyasi bor.", "ru": "У меня аллергия на лекарства." },
+        { "id": "clinic.interpreter", "uz": "Tashxis va davolash haqida imo-ishora tarjimoni bilan gaplashmoqchiman.", "ru": "О диагнозе и лечении я хочу говорить с переводчиком жестового языка." },
+        { "id": "clinic.write", "uz": "Dori qanday ichilishini yozib bering.", "ru": "Напишите, как принимать лекарство." },
+        { "id": "clinic.queue", "uz": "Navbatim kelganda menga qo‘l bilan ishora qiling. Men chaqiruvni eshitmayman.", "ru": "Когда подойдёт моя очередь, покажите мне рукой. Я не слышу вызов." }
+      ]
+    },
+    {
+      "id": "pharmacy", "icon": "pill",
+      "title": { "uz": "Dorixona", "ru": "Аптека" },
+      "cards": [
+        { "id": "pharmacy.recipe", "uz": "Menda retsept bor.", "ru": "У меня есть рецепт." },
+        { "id": "pharmacy.need", "uz": "Menga shu dori kerak.", "ru": "Мне нужно это лекарство." },
+        { "id": "pharmacy.how", "uz": "Kuniga necha marta ichish kerak? Yozib bering.", "ru": "Сколько раз в день принимать? Напишите." },
+        { "id": "pharmacy.price", "uz": "Narxi qancha? Yozib bering.", "ru": "Сколько стоит? Напишите." },
+        { "id": "pharmacy.cheaper", "uz": "Arzonroq o‘xshash dori bormi?", "ru": "Есть похожее лекарство дешевле?" }
+      ]
+    },
+    {
+      "id": "bank", "icon": "bank",
+      "title": { "uz": "Bank", "ru": "Банк" },
+      "cards": [
+        { "id": "bank.blocked", "uz": "Kartam bloklandi.", "ru": "Моя карта заблокирована." },
+        { "id": "bank.restore", "uz": "Kartani qayta tiklamoqchiman.", "ru": "Я хочу восстановить карту." },
+        { "id": "bank.lost", "uz": "Kartamni yo‘qotib qo‘ydim.", "ru": "Я потерял карту." },
+        { "id": "bank.sms", "uz": "Kodni SMS yoki ilova orqali yuboring. Ovozli qo‘ng‘iroqni eshitmayman.", "ru": "Пришлите код по SMS или в приложении. Я не слышу голосовой звонок." },
+        { "id": "bank.money", "uz": "Pul o‘tkazmoqchiman.", "ru": "Я хочу перевести деньги." },
+        { "id": "bank.explain", "uz": "Shartnoma shartlarini oddiy so‘z bilan yozib tushuntiring.", "ru": "Объясните условия договора письменно простыми словами." }
+      ]
+    },
+    {
+      "id": "taxi", "icon": "car",
+      "title": { "uz": "Taksi", "ru": "Такси" },
+      "cards": [
+        { "id": "taxi.address", "uz": "Meni shu manzilga olib boring.", "ru": "Отвезите меня по этому адресу." },
+        { "id": "taxi.price", "uz": "Qancha turadi? Yozib ko‘rsating.", "ru": "Сколько стоит? Покажите письменно." },
+        { "id": "taxi.stop", "uz": "Shu yerda to‘xtang.", "ru": "Остановите здесь." },
+        { "id": "taxi.deaf", "uz": "Men karman. Yo‘lda gapirsangiz eshitmayman.", "ru": "Я глухой. Если вы говорите в дороге, я не слышу." },
+        { "id": "taxi.card", "uz": "Karta bilan to‘lasam bo‘ladimi?", "ru": "Можно оплатить картой?" }
+      ]
+    },
+    {
+      "id": "police", "icon": "shield",
+      "title": { "uz": "Politsiya", "ru": "Полиция" },
+      "cards": [
+        { "id": "police.rights", "uz": "Men karman. Malakali imo-ishora tarjimoni kerak. Usiz so‘roqqa rozi emasman.", "ru": "Я глухой. Мне нужен квалифицированный переводчик жестового языка. Без него я не согласен на допрос." },
+        { "id": "police.write", "uz": "Savollaringizni yozib bering.", "ru": "Напишите ваши вопросы." },
+        { "id": "police.sign", "uz": "Tushunmagan hujjatimga imzo qo‘ymayman.", "ru": "Я не подпишу документ, который не понимаю." },
+        { "id": "police.contact", "uz": "Yaqinimga xabar bermoqchiman.", "ru": "Я хочу сообщить близкому человеку." },
+        { "id": "police.docs", "uz": "Hujjatlarim shu yerda.", "ru": "Мои документы здесь." }
+      ]
+    },
+    {
+      "id": "office", "icon": "office",
+      "title": { "uz": "Mahalla va idora", "ru": "Махалля и учреждения" },
+      "cards": [
+        { "id": "office.documents", "uz": "Qanday hujjatlar kerak? Ro‘yxatini yozib bering.", "ru": "Какие нужны документы? Напишите список." },
+        { "id": "office.application", "uz": "Ariza yozishga yordam bering.", "ru": "Помогите написать заявление." },
+        { "id": "office.interpreter", "uz": "Fuqarolar qabulida surdotarjimon ishtirok etishini so‘rayman.", "ru": "Прошу, чтобы на приёме граждан участвовал сурдопереводчик." },
+        { "id": "office.when", "uz": "Javob qachon bo‘ladi? Sanani yozing.", "ru": "Когда будет ответ? Напишите дату." },
+        { "id": "office.copy", "uz": "Ariza nusxasini menga bering.", "ru": "Дайте мне копию заявления." }
+      ]
+    },
+    {
+      "id": "shop", "icon": "bag",
+      "title": { "uz": "Do‘kon", "ru": "Магазин" },
+      "cards": [
+        { "id": "shop.price", "uz": "Narxini yozib ko‘rsating.", "ru": "Покажите цену письменно." },
+        { "id": "shop.this", "uz": "Menga shu kerak.", "ru": "Мне нужно это." },
+        { "id": "shop.size", "uz": "Boshqa o‘lchami bormi?", "ru": "Есть другой размер?" },
+        { "id": "shop.card", "uz": "Karta bilan to‘layman.", "ru": "Я оплачу картой." },
+        { "id": "shop.check", "uz": "Chekni bering.", "ru": "Дайте чек." }
+      ]
+    }
+  ]
+}

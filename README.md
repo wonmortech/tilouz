@@ -11,7 +11,7 @@
 
 [Sayt va prezentatsiya](https://tilo.wonmor.io) · [Telegram kanal](https://t.me/tiloapp) · [Tadqiqot hujjatlari](docs/) · [Hissa qo'shish](CONTRIBUTING.md) · [English](#english)
 
-> **Holat: rejalashtirish bosqichi.** Repozitoriyada hozircha tadqiqot va reja hujjatlari ([docs/](docs/)) hamda sayt-prezentatsiya ([site/](site/)) bor. Ilova kodi hali yozilmagan, birinchi ishlar issue'larda.
+> **Holat: sinov bosqichi.** Repozitoriyada tadqiqot va reja hujjatlari ([docs/](docs/)), sayt-prezentatsiya ([site/](site/)) va birinchi sinov ilovasi bor: [tilo.wonmor.io/app](https://tilo.wonmor.io/app/) ([site/app/](site/app/)) - yuzma-yuz subtitr, vaziyat kartalari, video xabar va favqulodda karta. Ilova telefonda ishlaydi, serverga hech narsa yubormaydi; karta matnlari kar maslahat kengashi tekshiruvini kutmoqda. Keyingi ishlar [issue'larda](https://github.com/wonmortech/tilouz/issues) ([#3](https://github.com/wonmortech/tilouz/issues/3)).
 
 ## Nima uchun
 
@@ -63,7 +63,7 @@ Kod: [Apache-2.0](LICENSE). Hujjatlar (`docs/`): [CC BY 4.0](LICENSES/CC-BY-4.0.
 
 **Tilo is an open-source, non-profit platform that removes the communication barrier between Deaf, hard-of-hearing and non-speaking people and hearing people.** Uzbekistan first, then Central Asia and the CIS.
 
-**Status: planning.** The repository holds the research and plan ([docs/](docs/), in Uzbek) and the presentation site ([site/](site/), in Uzbek, Russian and English). No application code yet; first tasks are in the issues.
+**Status: early test.** The repository holds the research and plan ([docs/](docs/), in Uzbek), the presentation site ([site/](site/), in Uzbek, Russian and English) and a first test app at [tilo.wonmor.io/app](https://tilo.wonmor.io/app/) ([site/app/](site/app/)): face-to-face captions, situation cards, video messages and an emergency card. It runs on the phone and sends nothing to a Tilo server; card texts are drafts awaiting review by the Deaf advisory council. Next tasks are in the [issues](https://github.com/wonmortech/tilouz/issues) ([#3](https://github.com/wonmortech/tilouz/issues/3)).
 
 The MVP: one-tap video calls to human sign-language interpreters, live Uzbek/Russian captions for face-to-face conversations, situation cards signed by Deaf signers, an office/petition helper, video messages, AAC for non-speaking people and a learning module for hearing parents. Later: an SOS channel, the first open consented Uzbek Sign Language dataset, avatars for static content only, and more CIS languages.
 

@@ -66,6 +66,7 @@ sign.mt sotib olinishi: Nagish (keyin Rylo) 2025-10-22 da e'lon qildi, asoschi D
 | sutton-signwriting/core | MIT | push 2025-11-23 | JS | Faol | [repo](https://github.com/sutton-signwriting/core) |
 | slevinski/signpuddle | - | 404 | - | Yo'q | - |
 | akkomron/uzslr-isolated-dynamic | - | push 2026-03-13 | 5 yulduz; UzSL tanish | Prototip | [repo](https://github.com/akkomron/uzslr-isolated-dynamic) |
+| leverow/uzsl | - (LICENSE yo'q, 2026-11-17) | push 2026-11-16 | Python/TS monorepo, 31 commit; intent katalogi, rozilik, ELAN import, landmark preprocessing | Skelet | [repo](https://github.com/leverow/uzsl) |
 | bekfurr/UZ_SL_TRSANSLATOR | Apache-2.0 | - | UzSL | Prototip | GitHub qidiruvi |
 | khdbeck/uzslr-sign-language-prototype | - | push 2026-10-06 | UzSL | Prototip | GitHub qidiruvi |
 
@@ -361,6 +362,7 @@ Katalog bahosi: 3-5 pw; forkdagi ilova GPL bo'lib qoladi. Audit bo'yicha jami 9-
 | SignON | **G'oya** | OpenAPI/AsyncAPI konvert + bosqich vaqtlari; MinIO pre-signed yuklash; rozilik endpointlari; PoseFormer kodi (keyingi UzSL tanish uchun) | - | - |
 | VLibras | **G'oya** | Queue-RPC + Redis kesh; `/review` crowd-reyting; avatar his-tuyg'u kontrakti; vidjet/kengaytma UX | - | - |
 | yandex/deaf | **G'oya** | Oldindan sintez qilingan tayyor iboralar, dialog rejimi, katta shrift | - | - |
+| leverow/uzsl | **G'oya (litsenziya kelguncha)** | Counterexample'li intent katalogi (`data/catalog/intents.bootstrap.json`); rozilik va huquqqa qarab publish (`services/api/src/uzsl_api/governance.py`); `draft -> reviewed -> published -> withdrawn`, yuklagan odam o'zini tasdiqlamaydi; ELAN EAF import va signer bo'yicha split tekshiruvi (`ml/src/uzsl_ml/`); "unknown/retry" rad etish metrikalari. Kod LICENSE'siz: hamma huquq muallifda, ko'chirib bo'lmaydi | - | Litsenziya yo'q |
 | FCC ACE Direct | **G'oya** | VRS dizayn namunasi | - | - |
 | DEC112 ng112-js (+ viewer) | Ixtiyoriy (keyin) | 112 matn/video oqimi, faqat O'zbekiston 112 dispetcheri hamkor bo'lsa; AGPL - server kodi nashr | - | - |
 | Kaggle ISLR 1-o'rin, ASL-citizen-code, MediaPipe | Keyin (tanish) | Hissa qilingan ma'lumotda UzSL tanish | 04d | - |

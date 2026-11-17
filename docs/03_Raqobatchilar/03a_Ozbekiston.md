@@ -210,6 +210,7 @@ Batafsil taqqoslash (Yandex, Azure, Google, ochiq Whisper modellari) - [04c](../
 | Sharh va klassifikator | HMM, SVM, k-NN, DL sharhi; ML klassifikator | - | [Zenodo 10093343](https://zenodo.org/records/10093343); [eipublication](https://eipublication.com/index.php/eijmrms/article/view/1885) |
 | khdbeck/uzslr-sign-language-prototype | 50 belgi, CNN-Transformer (PyTorch), real vaqt | Litsenziya tekshirilmagan | [GitHub](https://github.com/khdbeck/uzslr-sign-language-prototype) |
 | umid-weeb/uzbek-sign-language-ai | RTMPose + Random Forest, real vaqt | Litsenziya tekshirilmagan | [GitHub](https://github.com/umid-weeb/uzbek-sign-language-ai) |
+| leverow/uzsl (2026-11-15 dan) | Ikki tomonlama yordamchi: MediaPipe landmark -> TCN/kichik Transformer -> "unknown/retry" rad etish; teskari yo'l faster-whisper -> aniq matn resolver -> inson jumla videosi. Bitta vaziyat (ma'lumot peshtaxtasi), 50 ta xabar ma'nosi | 2026-11-17 holati: skelet va sintetik testlar (React PWA, FastAPI, PostgreSQL, S3); model, dataset va tasdiqlangan video yo'q; LICENSE fayli yo'q (issue #2 ochiq). Rozilik, signer bo'yicha split va kar reviewer qoidalari Tilo 06c bilan deyarli bir xil | [GitHub](https://github.com/leverow/uzsl); [architecture.md](https://github.com/leverow/uzsl/blob/dev/docs/architecture.md) |
 | Signly.uz | Flutter + Firebase + TFLite, "500+ sign" hamroh dataseti | 10 kishida pilot, aniqlik yo'q | [Zenodo 24003015](https://zenodo.org/records/24003015) |
 
 Umumiy xulosa: ochiq, litsenziyali UzSL dataseti GitHub, Kaggle va Hugging Face'da topilmadi (`uzbekistan_landscape.md`, 5-bo'lim; Kaggle'da faqat o'zbek nutq/matn datasetlari bor - [Kaggle](https://www.kaggle.com/datasets/javokhirraimov/uzbek-language-dataset-sentence-and-audio)). Mualliflarning OTM (TATU, Inha va boshq.) bog'liqligi tasdiqlanmagan. Batafsil - [04d](../04_Texnologiya/04d_Datasetlar_va_modellar.md).
@@ -266,6 +267,7 @@ Umumiy xulosa: ochiq, litsenziyali UzSL dataseti GitHub, Kaggle va Hugging Face'
 | Adliya vazirligi (surdo-online, HuquqPlus) | Ochiq dispetcher backend | B2G pilot | Integratsiya muhokamasi (90 kun) |
 | YouTube o'qituvchilari | Pullik ish, kreditlash | Imo-ishorachilar, ruxsatli kontent | Ro'yxat va taklif |
 | Talaba jamoalar (Remu, Signly.uz, GitHub mualliflari) | Mentorlik, ochiq repo | Hissa qo'shuvchilar | GitHub orqali taklif |
+| UzSL (leverow/uzsl) | VRI, subtitr, kartalar; kar ishtirokchilar bilan aloqa | Tanish tadqiqoti (bizning M16), rozilik/katalog kodi; **bitta yozuv sessiyasi va bitta rozilik protokoli** - kar imo-ishorachilarni ikki loyiha ikki marta jalb qilmasin | Litsenziya (Apache-2.0 mos) va hamkorlik taklifi issue orqali |
 
 Muddatlar - [06f, 3-bo'lim](../06_Platforma_rejasi/06f_Roadmap_24_oy.md).
 
