@@ -1,8 +1,10 @@
 # Contributing to Tilo
 
 Thank you for wanting to help. Tilo removes the communication barrier between Deaf, hard-of-hearing and
-non-speaking people and hearing people. It is in the planning stage: the repository holds the research and plan
-([docs/](docs/), in Uzbek) and the presentation site ([site/](site/)). Application code starts with the first issues.
+non-speaking people and hearing people. It is in an early test stage: the repository holds the research and plan
+([docs/](docs/), in Uzbek), the presentation site ([site/](site/)), the first test app ([site/app/](site/app/), live at
+[tilo.wonmor.io/app](https://tilo.wonmor.io/app/)) and a concept demo of the full planned app ([demo/](demo/)).
+What comes next and why: [ROADMAP.md](ROADMAP.md) and the decision log in [docs/decisions/](docs/decisions/).
 
 O'zbekcha qisqacha: issue oching yoki `good first issue` belgili vazifani oling, har commit `git commit -s` bilan,
 har o'zgarish pull request orqali. Savollar uchun [Telegram kanal](https://t.me/tiloapp).
@@ -14,7 +16,7 @@ har o'zgarish pull request orqali. Savollar uchun [Telegram kanal](https://t.me/
 | Developer (web, WebRTC, backend, mobile) | Pick an issue labelled `good first issue` or `help wanted` |
 | ML / speech / data engineer | Uzbek ASR evaluation, sign-language data tooling, see [docs/04_Texnologiya/](docs/04_Texnologiya/) |
 | Designer / accessibility expert | Video-first, low-literacy UX, see [docs/06_Platforma_rejasi/](docs/06_Platforma_rejasi/) |
-| Deaf community member, interpreter, linguist | Testing, sign content, review of the dataset plan; open an issue with the **Idea** template |
+| Deaf community member, interpreter, linguist | Testing, review of card texts (`deaf-review` label), sign content, review of the dataset plan; open an issue with the **Card text** or **Idea** template |
 | Translator | Uzbek (Latin and Cyrillic), Russian, Karakalpak, Kazakh, Kyrgyz, Tajik |
 | Researcher | Correct a source, add a missing product or study; link the primary source |
 
@@ -25,10 +27,16 @@ Report a vulnerability privately, never in a public issue: see [SECURITY.md](SEC
 Requirements: Node.js 24 and Git. There is no build step: `site/` is served as it is.
 
 ```sh
-node tools/check-site.mjs               # links, CSP rules, forbidden text
-npx http-server site -p 8080            # or any static server
+npm ci --ignore-scripts && npx playwright install chromium
+npm run check                           # links, CSP rules, forbidden text
+npm run site                            # site/ with the production headers, http://127.0.0.1:4178/app/
+npm run test:app                        # test app smoke tests (production /app CSP, fake camera)
+npm run test:demo                       # concept demo smoke tests
 pipx run reuse lint                     # SPDX header or REUSE.toml entry for every file
 ```
+
+A change to `site/app/` needs a matching test in `tests/app/`. A larger decision gets an ADR in
+[docs/decisions/](docs/decisions/) (copy `0000-shablon.md`).
 
 ## Rules for a change
 

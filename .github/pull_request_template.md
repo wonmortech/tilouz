@@ -4,7 +4,9 @@
 
 ## Checklist
 
-- [ ] `node tools/check-site.mjs` passes
+- [ ] `npm run check` passes
+- [ ] `site/app/` changed: `npm run test:app` passes and `tests/app/` covers the change
+- [ ] A larger decision has an ADR in `docs/decisions/`
 - [ ] Accessible: keyboard, contrast, captions, reduced motion
 - [ ] All three language pages (`/`, `/en/`, `/ru/`) are updated where needed
 - [ ] No personal data, no secrets, no sign video without written consent

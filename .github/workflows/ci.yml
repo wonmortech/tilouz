@@ -43,3 +43,7 @@ jobs:
 
       - name: Demo smoke test
         run: npm run test:demo
+
+      # The test app (site/app/): every view under the production /app/ CSP, card data, a fake-camera recording.
+      - name: Test app smoke test
+        run: npm run test:app
