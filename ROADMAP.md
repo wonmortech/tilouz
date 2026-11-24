@@ -2,7 +2,7 @@
 
 > Qisqa holat va keyingi qadamlar. To'liq 24 oylik reja, KPI va manbalar:
 > [docs/06_Platforma_rejasi/06f_Roadmap_24_oy.md](docs/06_Platforma_rejasi/06f_Roadmap_24_oy.md).
-> Bosqichlar va task'lar: [milestones](https://github.com/wonmortech/tilouz/milestones). Qarorlar: [docs/decisions/](docs/decisions/).
+> Jonli doska: **[GitHub Project · Tilo Roadmap & Backlog](https://github.com/orgs/wonmortech/projects/1)** (Board, Roadmap, Epics, P0, Owner tasks, Deaf review). Bosqichlar: [milestones](https://github.com/wonmortech/tilouz/milestones). Qarorlar: [docs/decisions/](docs/decisions/).
 
 **Holat (2026-11-24):** tadqiqot va reja tugagan, sinov ilovasi va konsept demo jonli, 0-bosqich (hamkorlar, intervyular) boshlanishi kerak.
 Barcha muddat va KPI baho: ular pilot natijasiga qarab qayta belgilanadi.

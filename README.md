@@ -66,7 +66,7 @@ Sayt (`site/`) build talab qilmaydi: istalgan statik server bilan oching, masala
 | [M2 · VRI pilot](https://github.com/wonmortech/tilouz/milestone/3) | 2027-04 … 06 | Jonli tarjimon, murojaat yordamchisi, AAC, Android | rejada |
 | [M3](https://github.com/wonmortech/tilouz/milestone/4) / [M4](https://github.com/wonmortech/tilouz/milestone/5) | 2027-07 … 2028 | Viloyatlar, B2G, lug'at va dataset, milliy VRI, SOS pilot | rejada |
 
-Har bosqich go/no-go darvozasi bilan yopiladi. Batafsil: [ROADMAP.md](ROADMAP.md), to'liq reja va KPI: [06f](docs/06_Platforma_rejasi/06f_Roadmap_24_oy.md), qarorlar: [docs/decisions/](docs/decisions/).
+Har bosqich go/no-go darvozasi bilan yopiladi. Jonli doska: [GitHub Project](https://github.com/orgs/wonmortech/projects/1). Batafsil: [ROADMAP.md](ROADMAP.md), to'liq reja va KPI: [06f](docs/06_Platforma_rejasi/06f_Roadmap_24_oy.md), qarorlar: [docs/decisions/](docs/decisions/).
 
 ## Qanday ishlaydi (sinov ilovasi)
 

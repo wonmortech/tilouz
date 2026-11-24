@@ -9,7 +9,7 @@ Loyihada hali versiyalangan reliz yo'q: `main` = jonli sayt.
 - `/app/` sinov ilovasi uchun smoke e2e testlar (`tests/app/`, `npm run test:app`, CI qadami). Ular prod `/app` CSP ostida, soxta kamera bilan ishlaydi va tashqi so'rov yo'qligini tekshiradi.
 - `tools/serve-site.mjs`: `site/` ni `deploy/Caddyfile` dagi yo'lga bog'liq headerlar bilan xizmat qiladi.
 - `ROADMAP.md`, `CHANGELOG.md` va `docs/decisions/` (ADR 0001-0005).
-- 5 milestone (M0-M4) va bosqich, soha va owner-task label'lari.
+- [GitHub Project · Tilo Roadmap & Backlog](https://github.com/orgs/wonmortech/projects/1): 8 epic, 55 mayda task (sub-issue), 5 milestone (M0-M4), bosqich, soha va owner-task label'lari, 10 view.
 
 ### Changed
 - README, CONTRIBUTING va SECURITY loyihaning hozirgi holatiga moslandi (sinov ilovasi jonli).
