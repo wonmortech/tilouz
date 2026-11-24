@@ -15,11 +15,11 @@
   <img alt="Holat: sinov" src="https://img.shields.io/badge/holat-sinov-E8A33D">
 </p>
 
-<p align="center"><b><a href="https://tilo.wonmor.io">Sayt</a> · <a href="https://wonmor.io/demo/tilo/">Jonli demo</a> · <a href="https://tilo.wonmor.io/app/">Sinov ilovasi</a> · <a href="docs/">Hujjatlar</a> · <a href="https://t.me/tiloapp">Telegram</a> · <a href="#english">English</a></b></p>
+<p align="center"><b><a href="https://tilo.wonmor.io">Sayt</a> · <a href="https://wonmor.io/demo/tilo/">Jonli demo</a> · <a href="https://tilo.wonmor.io/app/">Sinov ilovasi</a> · <a href="ROADMAP.md">Roadmap</a> · <a href="docs/">Hujjatlar</a> · <a href="https://t.me/tiloapp">Telegram</a> · <a href="#english">English</a></b></p>
 
 <p align="center"><a href="https://wonmor.io/demo/tilo/"><img alt="Tilo konsept demosi: bosh sahifa" src="docs/screenshots/home.jpg" width="900"></a></p>
 
-> **Holat: sinov bosqichi.** Birinchi sinov ilovasi [tilo.wonmor.io/app](https://tilo.wonmor.io/app/) da ([site/app/](site/app/)): yuzma-yuz subtitr, vaziyat kartalari, video xabar va favqulodda karta; telefonda ishlaydi, serverga hech narsa yubormaydi, karta matnlari kar maslahat kengashi tekshiruvini kutmoqda. [Jonli demo](https://wonmor.io/demo/tilo/) esa to'liq rejalashtirilgan ilovaning **konsept demosi**: haqiqiy UI, lekin to'qima ma'lumotlar, imo-ishora videolari o'rnida namuna animatsiya, qayta yuklanganda tiklanadi. Keyingi ishlar [issue'larda](https://github.com/wonmortech/tilouz/issues).
+> **Holat: sinov bosqichi.** Birinchi sinov ilovasi [tilo.wonmor.io/app](https://tilo.wonmor.io/app/) da ([site/app/](site/app/)): yuzma-yuz subtitr, vaziyat kartalari, video xabar va favqulodda karta; telefonda ishlaydi, serverga hech narsa yubormaydi, karta matnlari kar maslahat kengashi tekshiruvini kutmoqda. [Jonli demo](https://wonmor.io/demo/tilo/) esa to'liq rejalashtirilgan ilovaning **konsept demosi**: haqiqiy UI, lekin to'qima ma'lumotlar, imo-ishora videolari o'rnida namuna animatsiya, qayta yuklanganda tiklanadi. Keyingi ishlar: [ROADMAP.md](ROADMAP.md) va [milestone'lar](https://github.com/wonmortech/tilouz/milestones).
 
 ## Nima qiladi
 
@@ -55,6 +55,34 @@ npm ci --ignore-scripts && npm run demo   # http://127.0.0.1:4174/demo/tilo/
 
 Sayt (`site/`) build talab qilmaydi: istalgan statik server bilan oching, masalan `npx serve site`.
 
+## Holat va yo'l xaritasi
+
+| Bosqich | Muddat (baho) | Natija | Holat |
+|---|---|---|---|
+| Tadqiqot, brend, sayt | 2026-11 | 25+ hujjat, 300+ mahsulot tahlili, brend kitobi | ✅ tugagan |
+| Sinov ilovasi va konsept demo | 2026-11 | `/app/` (subtitr, 47 karta, video xabar, favqulodda karta), 14 modulli demo | ✅ jonli, kartalar qoralama |
+| [M0 · Tayyorgarlik](https://github.com/wonmortech/tilouz/milestone/1) | 2026-12 | Hamkor NNT, 15-20 intervyu, rozilik shabloni, kar hamrais | ⏳ boshlanmoqda |
+| [M1 · Muloqot yadrosi](https://github.com/wonmortech/tilouz/milestone/2) | 2027-01 … 03 | 50+ tekshirilgan karta, STT tanlovi, Telegram bot, 50+ sinovchi | rejada |
+| [M2 · VRI pilot](https://github.com/wonmortech/tilouz/milestone/3) | 2027-04 … 06 | Jonli tarjimon, murojaat yordamchisi, AAC, Android | rejada |
+| [M3](https://github.com/wonmortech/tilouz/milestone/4) / [M4](https://github.com/wonmortech/tilouz/milestone/5) | 2027-07 … 2028 | Viloyatlar, B2G, lug'at va dataset, milliy VRI, SOS pilot | rejada |
+
+Har bosqich go/no-go darvozasi bilan yopiladi. Batafsil: [ROADMAP.md](ROADMAP.md), to'liq reja va KPI: [06f](docs/06_Platforma_rejasi/06f_Roadmap_24_oy.md), qarorlar: [docs/decisions/](docs/decisions/).
+
+## Qanday ishlaydi (sinov ilovasi)
+
+```mermaid
+flowchart LR
+    U["Kar foydalanuvchi<br/>telefon"] --> A["/app/ PWA<br/>statik, build yo'q"]
+    A --> C["Kartalar<br/>cards.json, oflayn"]
+    A --> S["Subtitr<br/>brauzer Web Speech API"]
+    A --> V["Video xabar<br/>MediaRecorder, qurilmada"]
+    A --> L["Sozlama, manzil<br/>localStorage"]
+    S -. "ovoz brauzer ishlab chiqaruvchisiga<br/>(rozilikdan keyin)" .-> B["Brauzer STT xizmati"]
+    A -. "hech narsa yuborilmaydi" .-x T["Tilo serveri"]
+```
+
+Tilo serveri yo'q: CSP `connect-src 'self'` va `tests/app` buni har PR'da tekshiradi ([ADR 0002](docs/decisions/0002-test-app-runs-on-device.md), [ADR 0003](docs/decisions/0003-per-path-csp.md)).
+
 ## Tamoyillar
 
 - **Kar odamlar boshqaradi.** "Biz haqimizda bizsiz hech narsa".
@@ -69,6 +97,7 @@ Sayt (`site/`) build talab qilmaydi: istalgan statik server bilan oching, masala
 - [Raqobatchilar (300+ mahsulot)](docs/03_Raqobatchilar/), [texnologiya](docs/04_Texnologiya/), [huquq, moliya va notijorat model](docs/05_Huquq_moliya_va_notijorat_model.md)
 - [Platforma rejasi va 24 oylik roadmap](docs/06_Platforma_rejasi/), [manbalar](docs/07_Manbalar.md)
 - [Brend kitobi](https://tilo.wonmor.io/brand/) (`brand/`)
+- [Roadmap](ROADMAP.md), [qarorlar jurnali (ADR)](docs/decisions/), [o'zgarishlar](CHANGELOG.md)
 
 ## Ishlab chiqish
 
@@ -77,12 +106,15 @@ Sayt (`site/`) build talab qilmaydi: istalgan statik server bilan oching, masala
 | `demo/` | Konsept demo: haqiqiy UI, to'qima ma'lumot (`demo/data.js`), hash routing, istalgan sub-path'da ishlaydi |
 | `site/` | tilo.wonmor.io sayt-prezentatsiyasi va `site/app/` sinov ilovasi (statik, build yo'q) |
 | `brand/`, `docs/` | Brend kitobi, tadqiqot va reja |
-| `deploy/`, `tools/` | Caddy va atomik reliz, sayt tekshiruvi, demo build va skrinshotlar |
+| `tests/demo/`, `tests/app/` | Playwright smoke testlar: konsept demo va sinov ilovasi |
+| `deploy/`, `tools/` | Caddy va atomik reliz, sayt tekshiruvi, demo build, lokal server va skrinshotlar |
 
 ```sh
 npm run check             # site/: havolalar, CSP, taqiqlangan matn
 npm run demo:build        # dist/demo/tilo/
 npm run test:demo         # demo smoke e2e (Playwright, prod CSP ostida)
+npm run test:app          # /app/ smoke e2e (prod /app CSP, soxta kamera)
+npm run site              # site/ Caddyfile headerlari bilan: http://127.0.0.1:4178/app/
 npm run site:screenshots  # docs/screenshots/ ni qayta yaratish
 ```
 
@@ -102,4 +134,4 @@ Kod: [Apache-2.0](LICENSE). Hujjatlar (`docs/`): [CC BY 4.0](LICENSES/CC-BY-4.0.
 
 The MVP: one-tap video calls to human sign-language interpreters, live Uzbek/Russian captions for face-to-face conversations, situation cards signed by Deaf signers, an office/petition helper, video messages, AAC for non-speaking people and a learning module for hearing parents. Later: an organisations directory, an SOS channel (drill only in the demo), an interpreter cabinet, anonymous funder statistics, the first open consented Uzbek Sign Language dataset and more CIS languages.
 
-Principles: Deaf-led, free, open (Apache-2.0 code, CC BY 4.0 docs), privacy first, honest about what is planned. Want to help? Read [CONTRIBUTING.md](CONTRIBUTING.md), pick a [`good first issue`](https://github.com/wonmortech/tilouz/labels/good%20first%20issue), and join the [Telegram channel](https://t.me/tiloapp).
+Principles: Deaf-led, free, open (Apache-2.0 code, CC BY 4.0 docs), privacy first, honest about what is planned. Roadmap: [ROADMAP.md](ROADMAP.md) (phases M0-M4 with go/no-go gates); decisions: [docs/decisions/](docs/decisions/). Want to help? Read [CONTRIBUTING.md](CONTRIBUTING.md), pick a [`good first issue`](https://github.com/wonmortech/tilouz/labels/good%20first%20issue), and join the [Telegram channel](https://t.me/tiloapp).

@@ -1,0 +1,45 @@
+# SPDX-FileCopyrightText: 2026 Wonmor and Tilo contributors
+# SPDX-License-Identifier: Apache-2.0
+
+name: Card text
+description: A situation card in the test app is wrong, unclear or missing (Deaf reviewers welcome)
+labels: ["content", "deaf-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Karta matnlari hozircha qoralama: kar maslahat kengashi ularni hali tekshirmagan. Har qanday tuzatish foydali.
+        Card texts are drafts until the Deaf advisory council reviews them. Every correction helps.
+  - type: input
+    id: card
+    attributes:
+      label: Card id or text
+      description: "The id from site/app/data/cards.json (e.g. clinic.pain), or the card text as you see it"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it?
+      options:
+        - Wrong or unclear wording
+        - Offensive or not how Deaf people would say it
+        - Translation (uz / ru) does not match
+        - A card is missing
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Your proposal
+      description: The better wording in Uzbek and/or Russian, and the situation where it is needed
+    validations:
+      required: true
+  - type: checkboxes
+    id: who
+    attributes:
+      label: About you (optional)
+      options:
+        - label: I am Deaf or hard of hearing
+        - label: I am a sign-language interpreter

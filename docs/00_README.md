@@ -20,7 +20,7 @@
 | Logo | Ondu "To'lqin" belgisi asosida 5 variant; **01 Geometrik tavsiya**, yakuniy tanlov kutilmoqda - [TILO_LOGO.md](08_Brend/tilo_logo/TILO_LOGO.md) |
 | Auditoriya | 1-o'rinda O'zbekiston, keyin Qirg'iziston, Tojikiston, Qozog'iston va boshqa MDH |
 | Model | Notijorat, ochiq kod (Apache-2.0), kar odamlar boshqaradi ("Nothing about us without us") |
-| Holat | Tadqiqot va reja tugagan; 0-bosqich (hamkorlar, intervyular) boshlanishi kerak |
+| Holat | Tadqiqot va reja tugagan; sinov ilovasi [tilo.wonmor.io/app](https://tilo.wonmor.io/app/) va [konsept demo](https://wonmor.io/demo/tilo/) jonli (2026-11-17); 0-bosqich (hamkorlar, intervyular) boshlanishi kerak. Qisqa holat: [ROADMAP.md](../ROADMAP.md), qarorlar: [decisions/](decisions/) |
 
 ## 2. Papkani qanday o'qish kerak
 
